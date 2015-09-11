@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi, I'm studying web development, and looking to learn Ruby on Rails so I can start creating my own projects!
 
 Things you may want to cover:
 
