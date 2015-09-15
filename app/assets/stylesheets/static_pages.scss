@@ -1,3 +1,30 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1{
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+  color: #CC3300;
+  text-align: center;
+  font-size: 4em;
+}
+
+h2{
+  font-family: "Times New Roman", Times, serif;
+  //font-style: oblique;
+  color: #E65C00;
+  text-align: center;
+  font-size: 2em;
+  padding-bottom:3%;
+}
+
+.style_image {
+  width: 30%;
+  height: 30%;
+  margin-left:35%;
+  padding: 10px;
+  border:3px solid #CC3300;
+}
+
+
