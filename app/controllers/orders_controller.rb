@@ -12,7 +12,5 @@ class OrdersController < ApplicationController
   def create
   end
 
-  def name
-  end
 
 end
