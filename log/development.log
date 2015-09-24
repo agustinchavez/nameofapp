@@ -5742,3 +5742,11 @@ Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef218384
 
 
 Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-24 11:08:30 -0500
+
+
+Started GET "/" for ::1 at 2015-09-24 13:21:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (16.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (11.5ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  Rendered static_pages/landing_page.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 2023ms (Views: 1970.8ms | ActiveRecord: 12.2ms)
