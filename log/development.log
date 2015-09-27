@@ -6006,3 +6006,1086 @@ Migrating to CreateOrders (20150925162333)
   [1m[35mSQL (0.7ms)[0m  INSERT INTO "orders" ("product_id") VALUES (?)  [["product_id", 1]]
   [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
   [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+
+
+Started GET "/" for ::1 at 2015-09-25 14:17:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (13.7ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 14.3ms)
+
+ActionView::MissingTemplate (Missing template layouts/static with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/agustinchavez/Desktop/nameofapp/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:86:in `resolve_layout'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:93:in `resolve_layout'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:76:in `block in find_layout'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:242:in `with_layout_format'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `with_layout_format'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:76:in `find_layout'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:60:in `render_with_layout'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (159.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (122.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (278.9ms)
+
+
+Started GET "/" for ::1 at 2015-09-25 14:23:14 -0500
+Processing by StaticPagesController#landing_page as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 617ms (Views: 606.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-09-25 14:23:15 -0500
+
+
+Started GET "/assets/static_pages.self-1a9f16b33bca476db8a9e956eff28e246fe45628114325032927bf2372ffd1a4.css?body=1" for ::1 at 2015-09-25 14:23:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-25 14:23:15 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-25 14:23:15 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-25 14:23:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-25 14:23:15 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 14:23:15 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 14:23:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-25 14:23:15 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-09-25 14:23:15 -0500
+
+
+Started GET "/assets/products.self-3339b25f5727b118b1e656e223fcc95845570e78ad15318f33cd9ebe42c007fa.css?body=1" for ::1 at 2015-09-25 14:23:15 -0500
+
+
+Started GET "/" for ::1 at 2015-09-25 14:34:12 -0500
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 92ms (Views: 78.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-09-25 14:34:12 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-25 14:34:12 -0500
+
+
+Started GET "/assets/static_pages.self-1a9f16b33bca476db8a9e956eff28e246fe45628114325032927bf2372ffd1a4.css?body=1" for ::1 at 2015-09-25 14:34:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-25 14:34:12 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-25 14:34:12 -0500
+
+
+Started GET "/assets/products.self-3339b25f5727b118b1e656e223fcc95845570e78ad15318f33cd9ebe42c007fa.css?body=1" for ::1 at 2015-09-25 14:34:12 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-25 14:34:12 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-09-25 14:34:12 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 14:34:12 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 14:34:12 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-25 14:34:12 -0500
+
+
+Started GET "/..." for ::1 at 2015-09-25 14:34:12 -0500
+
+ActionController::RoutingError (No route matches [GET] "/..."):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (28.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (38.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (271.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (114.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (244.6ms)
+
+
+Started GET "/" for ::1 at 2015-09-25 14:37:15 -0500
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (32.3ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x007fcd177a7920>:0x007fcd174d6408>):
+    21:       </div>
+    22:     </div>
+    23:     <% end %>
+    24:     <div class="item<%= " active" if product == @products.first %>">
+    25:       <img src="..." alt="...">
+    26:       <div class="carousel-caption">
+    27:         ...
+  app/views/static_pages/landing_page.html.erb:24:in `_app_views_static_pages_landing_page_html_erb__282421551916308027_70259418151540'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (121.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (102.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (232.6ms)
+
+
+Started GET "/" for ::1 at 2015-09-25 14:37:28 -0500
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 73ms (Views: 69.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-25 14:37:28 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-25 14:37:28 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-25 14:37:28 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-25 14:37:28 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-09-25 14:37:28 -0500
+
+
+Started GET "/assets/static_pages.self-1a9f16b33bca476db8a9e956eff28e246fe45628114325032927bf2372ffd1a4.css?body=1" for ::1 at 2015-09-25 14:37:28 -0500
+
+
+Started GET "/assets/products.self-3339b25f5727b118b1e656e223fcc95845570e78ad15318f33cd9ebe42c007fa.css?body=1" for ::1 at 2015-09-25 14:37:28 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 14:37:28 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 14:37:28 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-25 14:37:28 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-09-25 14:37:28 -0500
+
+
+Started GET "/..." for ::1 at 2015-09-25 14:37:28 -0500
+
+ActionController::RoutingError (No route matches [GET] "/..."):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (203.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (111.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (230.4ms)
+
+
+Started GET "/" for ::1 at 2015-09-25 14:38:45 -0500
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 75ms (Views: 73.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/static_pages.self-1a9f16b33bca476db8a9e956eff28e246fe45628114325032927bf2372ffd1a4.css?body=1" for ::1 at 2015-09-25 14:38:45 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-25 14:38:45 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-09-25 14:38:45 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-25 14:38:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-25 14:38:45 -0500
+
+
+Started GET "/assets/products.self-3339b25f5727b118b1e656e223fcc95845570e78ad15318f33cd9ebe42c007fa.css?body=1" for ::1 at 2015-09-25 14:38:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-25 14:38:45 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 14:38:45 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-09-25 14:38:45 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-25 14:38:45 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 14:38:45 -0500
+
+
+Started GET "/..." for ::1 at 2015-09-25 14:38:45 -0500
+
+ActionController::RoutingError (No route matches [GET] "/..."):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (149.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (126.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (279.7ms)
+
+
+Started GET "/" for ::1 at 2015-09-25 15:02:49 -0500
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 150ms (Views: 148.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/products.self-3339b25f5727b118b1e656e223fcc95845570e78ad15318f33cd9ebe42c007fa.css?body=1" for ::1 at 2015-09-25 15:02:49 -0500
+
+
+Started GET "/assets/static_pages.self-1a9f16b33bca476db8a9e956eff28e246fe45628114325032927bf2372ffd1a4.css?body=1" for ::1 at 2015-09-25 15:02:49 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-09-25 15:02:49 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-25 15:02:49 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-25 15:02:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-25 15:02:49 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-09-25 15:02:49 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:02:49 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:02:49 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-25 15:02:49 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-25 15:02:49 -0500
+
+
+Started GET "/..." for ::1 at 2015-09-25 15:02:49 -0500
+
+ActionController::RoutingError (No route matches [GET] "/..."):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (209.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (133.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (280.1ms)
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:05:21 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (25.7ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x007fcd1900b4a8>:0x007fcd1900a530>):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= render partial: 'shared/form', locals: { product: product } %>
+    4: 
+    5: <h1>Listing Products</h1>
+    6: 
+  app/views/products/index.html.erb:3:in `_app_views_products_index_html_erb__1722167506642775825_70259432245180'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (138.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (209.0ms)
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:05:52 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (24.7ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x007fcd1900b4a8>:0x007fcd12c4d1c8>):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: //<%= render partial: 'shared/form', locals: { product: product } %>
+    4: 
+    5: <h1>Listing Products</h1>
+    6: 
+  app/views/products/index.html.erb:3:in `_app_views_products_index_html_erb__1722167506642775825_70259379944680'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (110.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (98.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (215.9ms)
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:06:01 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (Missing partial products/_product with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/agustinchavez/Desktop/nameofapp/app/views"
+):
+    16:   </thead>
+    17: 
+    18:   <tbody>
+    19:     <%= render @products %>
+    20:   </tbody>
+    21: </table>
+    22: 
+  app/views/products/index.html.erb:19:in `_app_views_products_index_html_erb__1722167506642775825_70259412953300'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (119.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (101.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (222.2ms)
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:07:53 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered shared/_product.html.erb (3.8ms)
+  Rendered products/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 96ms (Views: 95.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-09-25 15:07:53 -0500
+
+
+Started GET "/assets/static_pages.self-1a9f16b33bca476db8a9e956eff28e246fe45628114325032927bf2372ffd1a4.css?body=1" for ::1 at 2015-09-25 15:07:53 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-25 15:07:53 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-25 15:07:53 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-25 15:07:53 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:07:53 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:07:53 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-09-25 15:07:53 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-25 15:07:53 -0500
+
+
+Started GET "/assets/products.self-3339b25f5727b118b1e656e223fcc95845570e78ad15318f33cd9ebe42c007fa.css?body=1" for ::1 at 2015-09-25 15:07:53 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-25 15:07:53 -0500
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:08:34 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (23.2ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `shared' for #<#<Class:0x007fcd1900b4a8>:0x007fcd15716288>):
+    14:   </thead>
+    15: 
+    16:   <tbody>
+    17:     <%= render shared/@products %>
+    18:   </tbody>
+    19: </table>
+    20: 
+  app/views/products/index.html.erb:17:in `_app_views_products_index_html_erb__1722167506642775825_70259415866560'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (114.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (100.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (222.6ms)
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:08:44 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (Missing partial products/_product with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/agustinchavez/Desktop/nameofapp/app/views"
+):
+    14:   </thead>
+    15: 
+    16:   <tbody>
+    17:     <%= render @products %>
+    18:   </tbody>
+    19: </table>
+    20: 
+  app/views/products/index.html.erb:17:in `_app_views_products_index_html_erb__1722167506642775825_70259419457180'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (121.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (100.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (222.2ms)
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:08:50 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered shared/_product.html.erb (2.1ms)
+  Rendered products/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 72ms (Views: 71.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-09-25 15:08:50 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-25 15:08:50 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-25 15:08:50 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-25 15:08:50 -0500
+
+
+Started GET "/assets/products.self-3339b25f5727b118b1e656e223fcc95845570e78ad15318f33cd9ebe42c007fa.css?body=1" for ::1 at 2015-09-25 15:08:50 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-09-25 15:08:50 -0500
+
+
+Started GET "/assets/static_pages.self-1a9f16b33bca476db8a9e956eff28e246fe45628114325032927bf2372ffd1a4.css?body=1" for ::1 at 2015-09-25 15:08:50 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:08:50 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-25 15:08:50 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:08:50 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-25 15:08:50 -0500
+
+
+Started GET "/products/12" for ::1 at 2015-09-25 15:09:05 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered products/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 189ms (Views: 63.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/13" for ::1 at 2015-09-25 15:09:10 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered products/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:09:29 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered shared/_product.html.erb (2.9ms)
+  Rendered products/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:10:21 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered shared/_product.html.erb (1.9ms)
+  Rendered products/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products.self-3339b25f5727b118b1e656e223fcc95845570e78ad15318f33cd9ebe42c007fa.css?body=1" for ::1 at 2015-09-25 15:10:21 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-09-25 15:10:21 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-25 15:10:21 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-25 15:10:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-25 15:10:21 -0500
+
+
+Started GET "/assets/static_pages.self-1a9f16b33bca476db8a9e956eff28e246fe45628114325032927bf2372ffd1a4.css?body=1" for ::1 at 2015-09-25 15:10:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-25 15:10:21 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:10:21 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:10:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-25 15:10:21 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-09-25 15:10:21 -0500
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:10:24 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered shared/_product.html.erb (2.2ms)
+  Rendered products/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 75ms (Views: 73.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-09-25 15:10:24 -0500
+
+
+Started GET "/assets/static_pages.self-1a9f16b33bca476db8a9e956eff28e246fe45628114325032927bf2372ffd1a4.css?body=1" for ::1 at 2015-09-25 15:10:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-25 15:10:24 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-25 15:10:24 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-25 15:10:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-25 15:10:24 -0500
+
+
+Started GET "/assets/products.self-3339b25f5727b118b1e656e223fcc95845570e78ad15318f33cd9ebe42c007fa.css?body=1" for ::1 at 2015-09-25 15:10:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-25 15:10:24 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:10:24 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-09-25 15:10:24 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:10:24 -0500
+
+
+Started DELETE "/products/12" for ::1 at 2015-09-25 15:10:30 -0500
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1OlLJr6SEPWfapGe18uIP5mH8jfTMsQWJ0X7BJfP0ynrnxrW9otrIU6tJPVd7hv3G+ixHeKig9TeGLLHqfwLlg==", "id"=>"12"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "products" WHERE "products"."id" = ?  [["id", 12]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products
+Completed 302 Found in 11ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:10:30 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered shared/_product.html.erb (2.1ms)
+  Rendered products/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 89ms (Views: 87.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:10:41 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered shared/_product.html.erb (1.6ms)
+  Rendered products/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-09-25 15:10:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-09-25 15:10:42 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-09-25 15:10:42 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-09-25 15:10:42 -0500
+
+
+Started GET "/assets/static_pages.self-1a9f16b33bca476db8a9e956eff28e246fe45628114325032927bf2372ffd1a4.css?body=1" for ::1 at 2015-09-25 15:10:42 -0500
+
+
+Started GET "/assets/products.self-3339b25f5727b118b1e656e223fcc95845570e78ad15318f33cd9ebe42c007fa.css?body=1" for ::1 at 2015-09-25 15:10:42 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-09-25 15:10:42 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:10:42 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-25 15:10:42 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-09-25 15:10:42 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-09-25 15:10:42 -0500
+
+
+Started GET "/" for ::1 at 2015-09-25 15:10:48 -0500
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 98ms (Views: 95.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/..." for ::1 at 2015-09-25 15:10:49 -0500
+
+ActionController::RoutingError (No route matches [GET] "/..."):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (182.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (98.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (217.3ms)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "products" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Antique Bike"], ["description", "This bike has seen it all, if you want a bike with character, this is the one for you!"], ["created_at", "2015-09-25 20:30:31.249064"], ["updated_at", "2015-09-25 20:30:31.249064"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "products" SET "image_url" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["image_url", "https://s3.amazonaws.com/agustinchavez.ninja/salt-work-1192246.jpg"], ["updated_at", "2015-09-25 20:31:18.600462"], ["id", 14]]
+  [1m[35m (2.1ms)[0m  commit transaction
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:33:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered shared/_product.html.erb (4.6ms)
+  Rendered products/index.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 844ms (Views: 814.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-09-25 15:33:18 -0500
+Processing by StaticPagesController#landing_page as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 75ms (Views: 70.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/..." for ::1 at 2015-09-25 15:33:19 -0500
+
+ActionController::RoutingError (No route matches [GET] "/..."):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (60.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (274.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (111.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (244.2ms)
+
+
+Started GET "/products" for ::1 at 2015-09-25 15:33:43 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered shared/_product.html.erb (3.1ms)
+  Rendered products/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 88ms (Views: 86.5ms | ActiveRecord: 0.3ms)
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1[0m
+  [1m[35mOrder Load (17.3ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."product_id" = ?  [["product_id", 10]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "orders" ("product_id") VALUES (?)  [["product_id", 1]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "orders" ("product_id") VALUES (?)[0m  [["product_id", 1]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
