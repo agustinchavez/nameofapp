@@ -12,10 +12,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>Welcome to Bikes Chicago</h1>
-<h2>Your source for used Bikes in Chicago!</h2>
-<%= image_tag("bicyclistsmovement.jpg", class: "style_image") %>
-<%= yield %>
+
+  <div class="nav">
+      <ul class="noList">
+
+        <li>
+          <%= link_to 'About', static_pages_about_path %>
+        </li>
+
+        <li>
+          <%= link_to 'Contact', static_pages_contact_path %>
+        </li>
+
+        <li>
+          <%= link_to 'Products', products_path %>
+        </li>
+
+        <li>
+          <%= link_to 'New Product', new_product_path %>
+        </li>
+
+    </ul>
+  </div>
+
+  <h1>Welcome to Bikes Chicago</h1>
+  <h2>Your source for used Bikes in Chicago!</h2>
+  <%= image_tag("bicyclistsmovement.jpg", class: "style_image") %>
+  <%= yield %>
+
+
 
 </body>
 </html>
