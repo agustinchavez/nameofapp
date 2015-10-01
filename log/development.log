@@ -15396,3 +15396,26 @@ Content-Transfer-Encoding: 7bit
 this is  aaaaa meessage
   Rendered static_pages/thank_you.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 93ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-01 13:08:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:StaticPagesController> at /Users/agustinchavez/Desktop/nameofapp/app/controllers/static_pages_controller.rb:11)
+
+ActionMailer::Base#mail: processed outbound mail in 325.8ms
+
+Sent mail to to@domain.com (410.2ms)
+Date: Thu, 01 Oct 2015 13:08:25 -0500
+From: from@domain.com
+To: to@domain.com
+Message-ID: <560d76998f6ed_1043b3fe325e88af8924ee@Agustins-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 857ms (Views: 818.6ms | ActiveRecord: 0.0ms)
