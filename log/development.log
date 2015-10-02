@@ -15419,3 +15419,822 @@ I am the email body.
 Processing by StaticPagesController#contact as HTML
   Rendered static_pages/contact.html.erb within layouts/application (20.6ms)
 Completed 200 OK in 857ms (Views: 818.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-02 10:01:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:StaticPagesController> at /Users/agustinchavez/Desktop/nameofapp/app/controllers/static_pages_controller.rb:11)
+
+ActionMailer::Base#mail: processed outbound mail in 358.7ms
+
+Sent mail to to@domain.com (452.3ms)
+Date: Fri, 02 Oct 2015 10:01:39 -0500
+From: from@domain.com
+To: to@domain.com
+Message-ID: <560e9c5342988_1093f3fe516558e4044b1@Agustins-MacBook-Pro.local.mail>
+Subject: Welcome to My Awesome Site
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+I am the email body.
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (13.7ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 876ms (Views: 797.3ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/" for ::1 at 2015-10-02 10:01:40 -0500
+Processing by StaticPagesController#landing_page as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 72ms (Views: 71.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/..." for ::1 at 2015-10-02 10:01:40 -0500
+
+ActionController::RoutingError (No route matches [GET] "/..."):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (52.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (407.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (26.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (116.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (370.2ms)
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:01:43 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 65ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/static_pages/thank_you" for ::1 at 2015-10-02 10:02:02 -0500
+Processing by StaticPagesController#thank_you as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UP2WuD/Iz225fOVJ1pnBn4KBvcjmnFT6iv2D2bjwCQBvi8dId9G0uWi7UCJcvFJXAO7+4tcMEzhzoMoahsPRvw==", "name"=>"dollars", "email"=>"chavezsoccer10@hotmail.com", "message"=>"this is a message!!!", "commit"=>"Send"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from thank_you at /Users/agustinchavez/Desktop/nameofapp/app/controllers/static_pages_controller.rb:20)
+
+ActionMailer::Base#mail: processed outbound mail in 2.2ms
+
+Sent mail to chavez.agustin@outlook.com (343.4ms)
+Date: Fri, 02 Oct 2015 10:02:02 -0500
+From: chavezsoccer10@hotmail.com
+To: chavez.agustin@outlook.com
+Message-ID: <560e9c6a56f4_1093f3fe516558d2845be@Agustins-MacBook-Pro.local.mail>
+Subject: A new contact form message from dollars
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+this is a message!!!
+  Rendered static_pages/thank_you.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 426ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:32:17 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 106ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for ::1 at 2015-10-02 10:32:57 -0500
+Processing by ProductsController#new as HTML
+  Rendered shared/_form.html.erb (93.1ms)
+  Rendered products/new.html.erb within layouts/application (96.9ms)
+Completed 200 OK in 206ms (Views: 204.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:33:42 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 79ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:33:42 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:33:42 -0500
+
+
+Started GET "/assets/static_pages.self-49e4ab73b6864e2bb165d19be4e95d83a3f6e55cbc1116aff53a1b04f7d99edc.css?body=1" for ::1 at 2015-10-02 10:33:42 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:33:42 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:33:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:33:42 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:33:42 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:33:42 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:33:42 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:33:42 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:33:42 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:34:22 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 209ms (Views: 208.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-6c8f728406ff445cb25cca588479ed8a12e55ffed16c5941bdae248c542cbe89.css?body=1" for ::1 at 2015-10-02 10:34:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:34:22 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:34:22 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:34:22 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:34:23 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:34:23 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:34:23 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:34:23 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:34:23 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:34:23 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:34:23 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:34:52 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 138ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-3ac0993f32ff9857187b36d26c5b984730d25631afc4e963b8c7e0c64812a27d.css?body=1" for ::1 at 2015-10-02 10:34:52 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:34:52 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:34:52 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:34:52 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:34:52 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:34:52 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:34:52 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:34:52 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:34:52 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:34:52 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:34:52 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:36:11 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 132ms (Views: 131.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:36:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:36:11 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:36:11 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:36:11 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:36:11 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:36:11 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:36:11 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:36:11 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:36:11 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:36:11 -0500
+
+
+Started GET "/assets/static_pages.self-a3d32e26353bc6352a228956ad75ec19253d25c853434cb3839634322660a3da.css?body=1" for ::1 at 2015-10-02 10:36:11 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:38:01 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 125ms (Views: 124.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-a3906a2f1224e2ffc992d91b631fea119b1c250eefa312690c9a969bf904bc3c.css?body=1" for ::1 at 2015-10-02 10:38:01 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:38:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:38:01 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:38:01 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:38:01 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:38:01 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:38:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:38:01 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:38:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:38:01 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:38:01 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:38:31 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 135ms (Views: 134.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-5efed4ea2e526d89da81ec47faaa5e4877225787f9e51aff5d5455de0234b145.css?body=1" for ::1 at 2015-10-02 10:38:31 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:38:31 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:38:31 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:38:31 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:38:31 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:38:31 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:38:31 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:38:31 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:38:31 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:38:31 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:38:31 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:38:38 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 124ms (Views: 123.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:38:38 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:38:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:38:38 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:38:38 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:38:38 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:38:38 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:38:38 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:38:38 -0500
+
+
+Started GET "/assets/static_pages.self-d1d66bab4b5aed39e94251dfd9d634920f4a9c68c8266957380254e62721fd99.css?body=1" for ::1 at 2015-10-02 10:38:38 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:38:38 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:38:38 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:38:54 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 187ms (Views: 186.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:38:54 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:38:54 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:38:54 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:38:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:38:54 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:38:54 -0500
+
+
+Started GET "/assets/static_pages.self-dee85f280c0731cbca1fe4f2105f57f0701291cc69dbb54247c626b1f1f321ac.css?body=1" for ::1 at 2015-10-02 10:38:54 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:38:54 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:38:54 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:38:54 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:38:54 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:39:36 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 101ms (Views: 100.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:39:37 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:39:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:39:37 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:39:37 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:39:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:39:37 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:39:37 -0500
+
+
+Started GET "/assets/static_pages.self-29628959af9f8b91195b0d394fb4cb1ff33bd8690e5027a977cec7b1a9b90052.css?body=1" for ::1 at 2015-10-02 10:39:37 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:39:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:39:37 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:39:37 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:39:43 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 105ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-c5233cdfb2b109a081646c45893f0369eb5d547a583eb4fd4752f382b7cc2cef.css?body=1" for ::1 at 2015-10-02 10:39:43 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:39:43 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:39:43 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:39:43 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:39:43 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:39:43 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:39:43 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:39:43 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:39:43 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:39:43 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:39:43 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:39:50 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 101ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:39:50 -0500
+
+
+Started GET "/assets/static_pages.self-585ab6572efd1a72e02d00f5c920266f83020a4c44ba048c14523ef0db9d3299.css?body=1" for ::1 at 2015-10-02 10:39:50 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:39:50 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:39:50 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:39:50 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:39:50 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:39:50 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:39:50 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:39:50 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:39:50 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:39:50 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:40:19 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 130ms (Views: 128.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:40:19 -0500
+
+
+Started GET "/assets/static_pages.self-8634bc593454023bb6c779ddc4d4964d2390156221078e3bad8d96019a9883a1.css?body=1" for ::1 at 2015-10-02 10:40:19 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:40:19 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:40:19 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:40:19 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:40:19 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:40:19 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:40:19 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:40:19 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:40:19 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:40:19 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:40:36 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 110ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-43f4aa7a3c0ace20158b44e3eeeff4662d8315071eab3b62309ec67b53c333d2.css?body=1" for ::1 at 2015-10-02 10:40:36 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:40:36 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:40:36 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:40:36 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:40:36 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:40:36 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:40:36 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:40:36 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:40:36 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:40:36 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:40:36 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:40:39 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:40:39 -0500
+
+
+Started GET "/assets/static_pages.self-43f4aa7a3c0ace20158b44e3eeeff4662d8315071eab3b62309ec67b53c333d2.css?body=1" for ::1 at 2015-10-02 10:40:39 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:40:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:40:39 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:40:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:40:39 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:40:39 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:40:39 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:40:39 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:40:39 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:40:39 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:40:54 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 119ms (Views: 118.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-a9e06c3e7b3ee66a0d66cd182eb95d7f5358eba5999b6c336814dff7b7b4f5ff.css?body=1" for ::1 at 2015-10-02 10:40:54 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:40:54 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:40:54 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:40:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:40:54 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:40:54 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:40:54 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:40:54 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:40:54 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:40:54 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:40:54 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:41:30 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 57ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:41:30 -0500
+
+
+Started GET "/assets/static_pages.self-a9e06c3e7b3ee66a0d66cd182eb95d7f5358eba5999b6c336814dff7b7b4f5ff.css?body=1" for ::1 at 2015-10-02 10:41:30 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:41:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:41:30 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:41:30 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:41:30 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:41:30 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:41:30 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:41:30 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:41:30 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:41:30 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:42:05 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 126ms (Views: 125.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:42:05 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:42:05 -0500
+
+
+Started GET "/assets/static_pages.self-1718e8c5dcd974067fe2c1bdf8f793132006b0e4d48216aa50cb56c62d482881.css?body=1" for ::1 at 2015-10-02 10:42:05 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:42:05 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:42:05 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:42:05 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:42:05 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:42:05 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:42:05 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:42:05 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:42:05 -0500
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-02 10:43:19 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 117ms (Views: 116.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-10-02 10:43:19 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-02 10:43:19 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-02 10:43:19 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-02 10:43:19 -0500
+
+
+Started GET "/assets/products.self-5d666dc8d7499782d0eb4abc8f0637c4e796e74cdcd99c54d933246809ac4f34.css?body=1" for ::1 at 2015-10-02 10:43:19 -0500
+
+
+Started GET "/assets/scaffolds.self-8eb2c4df9661af5957a6949f7ef05919e98aad4510a406e0df0900e21618c618.css?body=1" for ::1 at 2015-10-02 10:43:19 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-02 10:43:19 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:43:19 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-02 10:43:19 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-02 10:43:19 -0500
+
+
+Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:43:19 -0500
