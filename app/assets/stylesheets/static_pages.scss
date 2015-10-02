@@ -19,6 +19,10 @@ h2{
   padding-bottom:3%;
 }
 
+p{
+  text-align: center;
+}
+
 .style_image {
   width: 30%;
   height: 30%;
@@ -37,5 +41,18 @@ h2{
   color:red;
   padding: 0%;
 }
+
+.row {
+  margin-top: 2%;
+  color:red;
+  padding: 0%;
+  text-align: center;
+}
+
+.col-md-4, .contact-btn {
+  margin-left: 30%;
+}
+
+
 
 
