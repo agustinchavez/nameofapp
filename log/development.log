@@ -16240,6 +16240,7 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 Started GET "/assets/bicyclistsmovement-c165b36583fa2dd2224f385cb675b230ef21838461a33e77a876be6fb5c813c5.jpg" for ::1 at 2015-10-02 10:43:19 -0500
 
 
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2015-10-02 10:51:51 -0500
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:StaticPagesController> at /Users/agustinchavez/Desktop/nameofapp/app/controllers/static_pages_controller.rb:11)
@@ -16251,6 +16252,19 @@ Date: Fri, 02 Oct 2015 10:51:52 -0500
 From: from@domain.com
 To: to@domain.com
 Message-ID: <560ea818d271e_10a073fd2d9940f0c8922e@Agustins-MacBook-Pro.local.mail>
+=======
+Started GET "/" for ::1 at 2015-10-05 10:33:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:StaticPagesController> at /Users/agustinchavez/Desktop/nameofapp/app/controllers/static_pages_controller.rb:11)
+
+ActionMailer::Base#mail: processed outbound mail in 356.1ms
+
+Sent mail to to@domain.com (420.7ms)
+Date: Mon, 05 Oct 2015 10:33:35 -0500
+From: from@domain.com
+To: to@domain.com
+Message-ID: <5612984f5c9bd_26f3fdf923911b8569b@Agustins-MacBook-Pro.local.mail>
+>>>>>>> 38
 Subject: Welcome to My Awesome Site
 Mime-Version: 1.0
 Content-Type: text/plain;
@@ -16259,12 +16273,28 @@ Content-Transfer-Encoding: 7bit
 
 I am the email body.
 Processing by StaticPagesController#landing_page as HTML
+<<<<<<< HEAD
   [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
   Rendered static_pages/landing_page.html.erb within layouts/application (32.7ms)
 Completed 200 OK in 481ms (Views: 413.9ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/..." for ::1 at 2015-10-02 10:51:53 -0500
+=======
+  [1m[35mProduct Load (15.5ms)[0m  SELECT  "products".* FROM "products" LIMIT 3
+  Rendered static_pages/landing_page.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 468ms (Views: 409.3ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-05 10:33:36 -0500
+Processing by StaticPagesController#landing_page as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" LIMIT 3[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 121ms (Views: 119.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/..." for ::1 at 2015-10-05 10:33:36 -0500
+>>>>>>> 38
 
 ActionController::RoutingError (No route matches [GET] "/..."):
   actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
@@ -16294,6 +16324,7 @@ ActionController::RoutingError (No route matches [GET] "/..."):
 
 
   Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+<<<<<<< HEAD
   Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
   Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (68.1ms)
   Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.5ms)
@@ -16437,6 +16468,61 @@ Date: Fri, 02 Oct 2015 11:18:58 -0500
 From: from@domain.com
 To: to@domain.com
 Message-ID: <560eae727de21_10bfa3ff27a8d09f87637c@Agustins-MacBook-Pro.local.mail>
+=======
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (55.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (320.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (13.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (135.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (371.8ms)
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-05 10:34:03 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 85ms (Views: 83.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/static_pages/thank_you" for ::1 at 2015-10-05 10:34:13 -0500
+Processing by StaticPagesController#thank_you as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yOFMROSqdKS3oCoYUpMVFDnFddDxzKrHDHZmHemXQzT3lx20rLMPcGZnn3PYtobcu6o2+sBc7QX1Ky/e16Sbiw==", "name"=>"Agustin", "email"=>"chavezsoccer10@hotmail.com", "message"=>"jkjlkjlkhlh", "commit"=>"Send"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from thank_you at /Users/agustinchavez/Desktop/nameofapp/app/controllers/static_pages_controller.rb:20)
+
+ActionMailer::Base#mail: processed outbound mail in 3.0ms
+
+Sent mail to chavez.agustin@outlook.com (359.4ms)
+Date: Mon, 05 Oct 2015 10:34:13 -0500
+From: chavezsoccer10@hotmail.com
+To: chavez.agustin@outlook.com
+Message-ID: <5612987537ef4_26f3fdf92390e3457032@Agustins-MacBook-Pro.local.mail>
+Subject: A new contact form message from Agustin
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+jkjlkjlkhlh
+  Rendered static_pages/thank_you.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 468ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-05 10:45:29 -0500
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from <class:StaticPagesController> at /Users/agustinchavez/Desktop/nameofapp/app/controllers/static_pages_controller.rb:11)
+
+ActionMailer::Base#mail: processed outbound mail in 2.3ms
+
+Sent mail to chavez.agustin@outlook.com (361.4ms)
+Date: Mon, 05 Oct 2015 10:45:29 -0500
+From: from@domain.com
+To: chavez.agustin@outlook.com
+Message-ID: <56129b19b11fb_26f3fdf93233d9c571eb@Agustins-MacBook-Pro.local.mail>
+>>>>>>> 38
 Subject: Welcome to My Awesome Site
 Mime-Version: 1.0
 Content-Type: text/plain;
@@ -16445,6 +16531,7 @@ Content-Transfer-Encoding: 7bit
 
 I am the email body.
 Processing by StaticPagesController#contact as HTML
+<<<<<<< HEAD
   Rendered static_pages/contact.html.erb within layouts/application (20.0ms)
 Completed 200 OK in 459ms (Views: 418.2ms | ActiveRecord: 0.0ms)
 
@@ -16545,3 +16632,30 @@ Processing by ProductsController#index as HTML
   Rendered shared/_product.html.erb (2.9ms)
   Rendered products/index.html.erb within layouts/application (8.0ms)
 Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.2ms)
+=======
+  Rendered static_pages/contact.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 76ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/static_pages/thank_you" for ::1 at 2015-10-05 10:45:48 -0500
+Processing by StaticPagesController#thank_you as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1SY3WTOb8kUOLq9v0Ra3DYXOZfUkDlMNgRmpfkny9pfqUGape4KJkd/pGgRbMyTFB6Em3xWeFM94ROC9d8EuKA==", "name"=>"dollars", "email"=>"chavezsoccer10@hotmail.com", "message"=>"Hey I reaallly like your site!", "commit"=>"Send"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from thank_you at /Users/agustinchavez/Desktop/nameofapp/app/controllers/static_pages_controller.rb:20)
+
+ActionMailer::Base#mail: processed outbound mail in 2.8ms
+
+Sent mail to chavez.agustin@outlook.com (404.8ms)
+Date: Mon, 05 Oct 2015 10:45:48 -0500
+From: chavezsoccer10@hotmail.com
+To: chavez.agustin@outlook.com
+Message-ID: <56129b2c3ec78_26f3fdf93233d9c572f2@Agustins-MacBook-Pro.local.mail>
+Subject: A new contact form message from dollars
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hey I reaallly like your site!
+  Rendered static_pages/thank_you.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 503ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+>>>>>>> 38
