@@ -46,7 +46,19 @@
           <% end %>
         </li>
     </ul>
+    <ul class="nav pull-right">
+      <li>
+        <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path)%>
+            <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+        <% end %>
+      </li>
+    </ul>
   </div>
+
+   <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
   <h1>Welcome to Bikes Chicago</h1>
   <h2>Your source for used Bikes in Chicago!</h2>
