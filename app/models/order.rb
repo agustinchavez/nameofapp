@@ -5,4 +5,3 @@ class Order < ActiveRecord::Base
   def total_sales
   end
 end
-
