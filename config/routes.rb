@@ -1,22 +1,34 @@
 Rails.application.routes.draw do
+
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+
+  resources :products do
+    resources :comments
+  end
+
   resources :users
-  resources :products
-  resources :orders, only: [:index, :show, :new, :create]
+  resources :payments
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
 
   get 'static_pages/index'
 
-  post 'static_pages/thank_you'
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#landing_page'
+  # root 'welcome#index'
+  root 'static_pages#index'
+
+  post 'static_pages/thank_you'
+
+  post 'payments/create'
+
+  # root 'static_pages#about'
+
+  resources :orders, only: [:index, :show, :new, :create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

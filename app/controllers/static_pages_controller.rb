@@ -1,16 +1,10 @@
 class StaticPagesController < ApplicationController
+  # Index is called landing_page in the course material
   def index
-    @products = Product.all
+    @products = Product.limit(4)
   end
 
-  def landing_page
-    @featured_product = Product.all
-    @products = Product.limit(3)
-  end
-
-  ActionMailer::Base.mail(:from => 'from@domain.com', :to => 'chavez.agustin@outlook.com', :subject => "Welcome to My Awesome Site", :body => 'I am the email body.').deliver
-
-def thank_you
+  def thank_you
   @name = params[:name]
   @email = params[:email]
   @message = params[:message]
@@ -20,5 +14,7 @@ def thank_you
         :body => @message).deliver
 end
 
+  # def landing_page
+  #   @products = Product.limit(3)
+  # end
 end
-
