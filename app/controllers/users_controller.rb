@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
-  before_filter :authenticate_user!, :except => [:new, :create]
+  before_filter :authenticate_user!
 
 
   # before_filter :admin_user
