@@ -1,24 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="row">
+  <div class="col-md-4">
+    <p>
+      <strong>Name:</strong>
+      <%= @product.name %>
+    </p>
+  </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <div class="col-md-4">
+    <p>
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </p>
+  </div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+  <div class="col-md-4">
+    <p>
+      <strong>Image:</strong>
+    </p>
+    <a href="<%= @product.image_url %>" class="img-responsive" alt="Responsive image">
+      <img src="<%= @product.image_url %>" alt="...">
+    </a>
+  </div>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+  <div class="col-md-4">
+    <p>
+      <strong>Colour:</strong>
+      <%= @product.colour %>
+    </p>
+  </div>
+
+</div>
 
 
 <button type="submit" class="btn btn-default"><%= link_to 'Edit', edit_product_path(@product) %></button>|
