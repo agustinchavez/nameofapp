@@ -17,20 +17,19 @@
 
   <div class="col-md-4">
     <p>
-      <strong>Image:</strong>
-    </p>
-    <a href="<%= @product.image_url %>" class="img-responsive" alt="Responsive image">
-      <img src="<%= @product.image_url %>" alt="...">
-    </a>
-  </div>
-
-  <div class="col-md-4">
-    <p>
       <strong>Colour:</strong>
       <%= @product.colour %>
     </p>
   </div>
 
+  <div class="col-md-4">
+    <p>
+      <strong>Image:</strong>
+    </p>
+    <a href="<%= @product.image_url %>" class="thumbnail" alt="Responsive image">
+      <img src="<%= @product.image_url %>" alt="...">
+    </a>
+  </div>
 </div>
 
 
