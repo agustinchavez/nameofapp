@@ -1,0 +1,37 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.review {
+  text-align:center;
+  padding:2%;
+}
+
+.rating {
+  text-align:center;
+}
+
+.avg-rating, .rated {
+  float:left;
+  padding: 2%;
+  margin-left: 3%;
+}
+
+
+
+.product-reviews {
+  margin-left: 8%;
+  float:left;
+  margin-top:10%;
+}
+
+.indiv-rating {
+  padding:10%;
+  margin:5%;
+}
+
+.btn {
+  margin-right: 70%;
+  padding:.5%;
+}
