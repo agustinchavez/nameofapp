@@ -53,3 +53,6 @@ end
 gem 'devise'
 
 gem 'cancancan'
+
+  #will_paginate
+gem 'will_paginate', '~> 3.0.5'
