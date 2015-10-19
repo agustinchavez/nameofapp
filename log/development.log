@@ -32183,6 +32183,7 @@ Started GET "/assets/star-off.png" for ::1 at 2015-10-15 15:23:51 -0500
 
 
 Started GET "/assets/star-on.png" for ::1 at 2015-10-15 15:23:52 -0500
+<<<<<<< HEAD
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36m (0.2ms)[0m  [1m            SELECT sql
@@ -35460,3 +35461,89 @@ Started GET "/assets/star-on.png" for ::1 at 2015-10-19 13:48:16 -0500
 
 Started GET "/assets/star-off.png" for ::1 at 2015-10-19 13:48:16 -0500
 >>>>>>> feature
+=======
+
+
+Started GET "/products" for ::1 at 2015-10-19 14:01:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered shared/_product.html.erb (3.0ms)
+  Rendered products/index.html.erb within layouts/application (38.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 488ms (Views: 466.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/comments.self-a81caa4b0cc258688d502a0a8324b3ada4754f7702f985f8c42cf4e16169fbdf.css?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/site.self-e8edfebf0c6d3e9767147fc771c65fb1ffa8c694250fedcf794b5b334362d3e0.js?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/alerts.self-5b7a93fa6ab4f912d9a31efc552564c41eedc82be592bfa85a8659fc2bba54db.js?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-19 14:01:41 -0500
+
+
+Started GET "/products/15" for ::1 at 2015-10-19 14:01:49 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC  [["product_id", 15]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (58.8ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  Rendered products/show.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 260ms (Views: 194.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-10-19 14:01:49 -0500
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-10-19 14:01:49 -0500
+>>>>>>> 43
