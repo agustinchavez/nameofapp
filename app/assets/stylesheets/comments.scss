@@ -6,16 +6,19 @@
 .review {
   text-align:center;
   padding:2%;
+  position: static;
 }
 
 .rating {
   text-align:center;
+  position: relative;
 }
 
-.avg-rating, .rated {
+.rated {
   float:left;
-  padding: 2%;
+  padding: 2.5%;
   margin-left: 3%;
+  position: absolute;
 }
 
 
@@ -24,11 +27,6 @@
   margin-left: 8%;
   float:left;
   margin-top:10%;
-}
-
-.indiv-rating {
-  padding:10%;
-  margin:5%;
 }
 
 .btn {
