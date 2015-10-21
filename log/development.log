@@ -37623,3 +37623,69 @@ Started GET "/assets/star-off.png" for ::1 at 2015-10-20 14:00:15 -0500
 
 
 Started GET "/assets/star-on.png" for ::1 at 2015-10-20 14:00:15 -0500
+
+
+Started GET "/" for ::1 at 2015-10-21 10:20:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (23.1ms)
+  [1m[35mUser Load (41.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 2502ms (Views: 2407.7ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/products" for ::1 at 2015-10-21 10:20:50 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (7.8ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered shared/_product.html.erb (3.9ms)
+  Rendered products/index.html.erb within layouts/application (50.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 257ms (Views: 247.1ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/products/15" for ::1 at 2015-10-21 10:20:57 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (9.6ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0[0m  [["product_id", 15]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 15]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (144.0ms)
+  [1m[35m (0.3ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 15]]
+  Rendered products/show.html.erb within layouts/application (160.9ms)
+Completed 200 OK in 439ms (Views: 257.8ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-10-21 10:20:57 -0500
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-10-21 10:20:57 -0500
+
+
+Started GET "/static_pages/about" for ::1 at 2015-10-21 10:21:07 -0500
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 118ms (Views: 117.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/static_pages/contact" for ::1 at 2015-10-21 10:21:10 -0500
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 141ms (Views: 139.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for ::1 at 2015-10-21 10:21:14 -0500
+Processing by ProductsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_form.html.erb (26.0ms)
+  Rendered products/new.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 166ms (Views: 163.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-21 10:21:18 -0500
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 115ms (Views: 114.2ms | ActiveRecord: 0.2ms)
