@@ -57,3 +57,6 @@ gem 'cancancan'
 
   #will_paginate
 gem 'will_paginate', '~> 3.0.5'
+
+#factory_girl gem
+gem "factory_girl_rails", "~> 4.0"
