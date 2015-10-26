@@ -4,7 +4,7 @@ describe UsersController,  :type => :controller do
 
   before do
       @user = User.create(email: "freem@tibet.com", password: "2015indahouse")
-      @userTwo = User.create(:user, :email => "this@other.com", :password => "madeitup")
+      @userTwo = User.create(:email => "abc@def.com", :password => "hijklmno")
 
     end
 
@@ -20,11 +20,10 @@ describe UsersController,  :type => :controller do
             expect(assigns(:user)).to eq @user
           end
 
-          it "cannot access userTwo details" do
-            get :show, id: @userTwo.id
-            expect(response).to redirect_to(root_path)
-            expect(response).to have_http_status(302)
-          end
+         it "user cannot access userTwo" do
+          get :show, id: @userTwo.id
+          expect(response).to redirect_to(root_path)
+        end
        end
 
        context "No user is logged in" do
