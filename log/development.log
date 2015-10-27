@@ -39647,3 +39647,1537 @@ Started GET "/assets/star-on.png" for ::1 at 2015-10-27 11:15:56 -0500
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+
+
+Started GET "/" for ::1 at 2015-10-27 16:01:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (14.6ms)
+  [1m[35mUser Load (16.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 1267ms (Views: 1211.6ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-27 16:01:17 -0500
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 178ms (Views: 177.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-10-27 16:01:18 -0500
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:01:18 -0500
+
+
+Started GET "/assets/site.self-7959c7eced199b421b9c4332d861386169b1ca3cb15724c72a3693818d702c82.js?body=1" for ::1 at 2015-10-27 16:01:18 -0500
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:01:18 -0500
+
+
+Started GET "/products" for ::1 at 2015-10-27 16:01:19 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (9.1ms)[0m  SELECT "products".* FROM "products"
+  Rendered shared/_product.html.erb (2.9ms)
+  Rendered products/index.html.erb within layouts/application (56.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 233ms (Views: 221.3ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/products/15" for ::1 at 2015-10-27 16:01:32 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  [1m[35m (8.9ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 15]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0[0m  [["product_id", 15]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 15]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (169.1ms)
+  Rendered products/show.html.erb within layouts/application (191.2ms)
+Completed 200 OK in 516ms (Views: 330.2ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-10-27 16:01:33 -0500
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-10-27 16:01:33 -0500
+
+
+Started GET "/products/14" for ::1 at 2015-10-27 16:01:44 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0[0m  [["product_id", 14]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (5.2ms)
+  Rendered products/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 159ms (Views: 155.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for ::1 at 2015-10-27 16:01:53 -0500
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered shared/_product.html.erb (2.0ms)
+  Rendered products/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 153ms (Views: 151.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/13" for ::1 at 2015-10-27 16:01:55 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 13]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0[0m  [["product_id", 13]]
+  Rendered shared/_new_comment.html.erb (2.4ms)
+  Rendered products/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 155ms (Views: 152.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-10-27 16:05:07 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 634ms (Views: 611.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/site.self-b8b571f4d6ccd47c45efdfc2c000256fce04de193207bbc57e80084f9451cf2f.js?body=1" for ::1 at 2015-10-27 16:05:07 -0500
+
+
+Started GET "/products" for ::1 at 2015-10-27 16:05:10 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered shared/_product.html.erb (4.1ms)
+  Rendered products/index.html.erb within layouts/application (23.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 201ms (Views: 198.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/15" for ::1 at 2015-10-27 16:05:16 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 15]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (63.5ms)
+  Rendered products/show.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 304ms (Views: 256.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/assets/images/star-off.png" for ::1 at 2015-10-27 16:05:16 -0500
+
+ActionController::RoutingError (No route matches [GET] "/products/assets/images/star-off.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (498.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (156.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (444.7ms)
+
+
+Started GET "/products/assets/images/star-on.png" for ::1 at 2015-10-27 16:05:17 -0500
+
+ActionController::RoutingError (No route matches [GET] "/products/assets/images/star-on.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (256.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (96.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (213.3ms)
+
+
+Started GET "/products/15" for ::1 at 2015-10-27 16:05:31 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (1.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 15]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (20.9ms)
+  Rendered products/show.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 333ms (Views: 326.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/alerts.self-5b7a93fa6ab4f912d9a31efc552564c41eedc82be592bfa85a8659fc2bba54db.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/site.self-5ecf76f94223dee24c7ae3286a8812e127e2d44e88b41d1c309b70c889bba83d.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-27 16:05:32 -0500
+
+
+Started GET "/assets/images/star-on.png" for ::1 at 2015-10-27 16:05:32 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/star-on.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (224.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (124.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (286.7ms)
+
+
+Started GET "/assets/images/star-off.png" for ::1 at 2015-10-27 16:05:33 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/star-off.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (194.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (96.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (210.9ms)
+
+
+Started GET "/products/15" for ::1 at 2015-10-27 16:05:46 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 15]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (6.8ms)
+  Rendered products/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 302ms (Views: 298.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/alerts.self-5b7a93fa6ab4f912d9a31efc552564c41eedc82be592bfa85a8659fc2bba54db.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/site.self-bc0ecefbc4c79843c828d82e93a5ecdae73118905206ed0979a2bce2b80485b0.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-27 16:05:47 -0500
+
+
+Started GET "/images/star-on.png" for ::1 at 2015-10-27 16:05:47 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/star-on.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (17.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (307.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (157.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (292.7ms)
+
+
+Started GET "/images/star-off.png" for ::1 at 2015-10-27 16:05:48 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/star-off.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (176.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (194.8ms)
+
+
+Started GET "/assets/images/star-off.png" for ::1 at 2015-10-27 16:05:48 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/star-off.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (151.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (90.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (193.2ms)
+
+
+Started GET "/assets/images/star-off.png" for ::1 at 2015-10-27 16:05:51 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/star-off.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (160.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (96.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (210.5ms)
+
+
+Started GET "/assets/images/star-off.png" for ::1 at 2015-10-27 16:05:52 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/star-off.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (160.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (96.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (201.7ms)
+
+
+Started GET "/assets/images/star-on.png" for ::1 at 2015-10-27 16:05:52 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/star-on.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (148.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (192.8ms)
+
+
+Started GET "/products/15" for ::1 at 2015-10-27 16:06:00 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 15]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (7.5ms)
+  Rendered products/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 291ms (Views: 286.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/site.self-c3ea2ab86b0cb0e80ff1f2e1494b9859cc5ef618741e2f195b9f19d692f7be3d.js?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:00 -0500
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-10-27 16:06:01 -0500
+
+
+Started GET "/assets/alerts.self-5b7a93fa6ab4f912d9a31efc552564c41eedc82be592bfa85a8659fc2bba54db.js?body=1" for ::1 at 2015-10-27 16:06:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-27 16:06:01 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:01 -0500
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-10-27 16:06:01 -0500
+
+
+Started GET "/assets/images/star-off.png" for ::1 at 2015-10-27 16:06:01 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/star-off.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (246.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (108.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (239.6ms)
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-10-27 16:06:01 -0500
+
+
+Started GET "/products/15" for ::1 at 2015-10-27 16:06:15 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 15]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (7.6ms)
+  Rendered products/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 300ms (Views: 295.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/alerts.self-5b7a93fa6ab4f912d9a31efc552564c41eedc82be592bfa85a8659fc2bba54db.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/site.self-c4364526dc30a9ef7ee87ecd6b0b931771f95e9916c37168f10bf8edc401ab78.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-10-27 16:06:16 -0500
+
+
+Started GET "/images/star-off.png" for ::1 at 2015-10-27 16:06:16 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/star-off.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (347.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (125.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (491.9ms)
+
+
+Started GET "/images/star-on.png" for ::1 at 2015-10-27 16:06:19 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/star-on.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (152.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (88.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (199.5ms)
+
+
+Started GET "/images/star-off.png" for ::1 at 2015-10-27 16:06:19 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/star-off.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (176.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (97.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (213.1ms)
+
+
+Started GET "/images/star-on.png" for ::1 at 2015-10-27 16:06:20 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/star-on.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (154.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (129.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (232.7ms)
+
+
+Started GET "/products/15" for ::1 at 2015-10-27 16:06:47 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 15]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (6.7ms)
+  Rendered products/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 292ms (Views: 286.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/alerts.self-5b7a93fa6ab4f912d9a31efc552564c41eedc82be592bfa85a8659fc2bba54db.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/site.self-f37ae1c03e9a588a3bf6a5d6c3d921ca2b636213e73ec1aa5653f523004e15bf.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-10-27 16:06:48 -0500
+
+
+Started GET "/products/15" for ::1 at 2015-10-27 16:06:57 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 15]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (6.4ms)
+  Rendered products/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 307ms (Views: 302.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2015-10-27 16:06:57 -0500
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-10-27 16:06:57 -0500
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-10-27 16:06:57 -0500
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-10-27 16:06:57 -0500
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:57 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:57 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-27 16:06:57 -0500
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:06:57 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/alerts.self-5b7a93fa6ab4f912d9a31efc552564c41eedc82be592bfa85a8659fc2bba54db.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/site.self-d92846230c43cac17d6c9ae39ec8b80cfd1c2b3629ea7369f2e63a4d0e883e37.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-10-27 16:06:58 -0500
+
+
+Started GET "/products/15" for ::1 at 2015-10-27 16:10:02 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 15]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (7.4ms)
+  Rendered products/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 321ms (Views: 315.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/site.self-4c723951686944d63bf9a1ef93de9e7ef27c8980da03340c0787e2b79e019f91.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/alerts.self-5b7a93fa6ab4f912d9a31efc552564c41eedc82be592bfa85a8659fc2bba54db.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-10-27 16:10:03 -0500
+
+
+Started GET "/products/.../assets/star-off.png" for ::1 at 2015-10-27 16:10:03 -0500
+
+ActionController::RoutingError (No route matches [GET] "/products/.../assets/star-off.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (247.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (5.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (159.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (342.5ms)
+
+
+Started GET "/products/.../assets/star-on.png" for ::1 at 2015-10-27 16:10:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/products/.../assets/star-on.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/agustinchavez/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (216.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (183.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (316.4ms)
+
+
+Started GET "/products/15" for ::1 at 2015-10-27 16:10:10 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 15]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (7.0ms)
+  Rendered products/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 171ms (Views: 166.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/alerts.self-5b7a93fa6ab4f912d9a31efc552564c41eedc82be592bfa85a8659fc2bba54db.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/site.self-d92846230c43cac17d6c9ae39ec8b80cfd1c2b3629ea7369f2e63a4d0e883e37.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-10-27 16:10:10 -0500
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-10-27 16:10:10 -0500

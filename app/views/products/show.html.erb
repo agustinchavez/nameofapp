@@ -33,7 +33,7 @@
       <strong>Image:</strong>
     </p>
     <a href="<%= @product.image_url %>" class="thumbnail" alt="Responsive image">
-      <img src="<%= @product.image_url %>" alt="...">
+      <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: @product.image_url) %>
     </a>
   </div>
 
