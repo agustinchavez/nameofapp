@@ -65,3 +65,5 @@ gem "factory_girl_rails", "~> 4.0"
 gem 'spork-rails'
 
 gem 'stripe'
+
+gem "brakeman", :require => false
