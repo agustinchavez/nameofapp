@@ -1,4 +1,4 @@
-function updateStars(){
+function ratyRating(){
   $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
   $('.rated').raty({ path: '/assets',
     readOnly: true,
@@ -9,6 +9,6 @@ function updateStars(){
 };
 
 $(document).on('ready page:load', function(){
-  updateStars();
+  ratyRating();
   $('.img-zoom').elevateZoom();
 });
