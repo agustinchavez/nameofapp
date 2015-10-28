@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  respond_to :json, :html
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, :except => [:index]
 
@@ -11,6 +12,7 @@ class ProductsController < ApplicationController
   else
     @products = Product.all
   end
+  respond_with @products
 end
 
   # GET /products/1
