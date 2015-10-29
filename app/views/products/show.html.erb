@@ -38,12 +38,11 @@
   </div>
 
   <!--   stripe payment form-->
-  <div class="col-md-4">
-   <%= form_tag "/payments/create" do %>
-      <%= hidden_field_tag "product_id", @product.id %>
+  <!-- <div class="col-md-4"> -->
+    <%= form_tag("/payments/create", remote: true) do %>
       <%= render partial: "shared/stripe_checkout_button" %>
     <% end %>
-  </div>
+  <!-- </div> -->
 
   <div class="col-md-4">
     <p class="avg-rating">Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
