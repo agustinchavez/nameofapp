@@ -1,40 +1,11 @@
-<<<<<<< HEAD
-
-=======
-// <script>
-// <%= hidden_field_tag "product_id", @product.id %>
-// <%= hidden_field_tag "product", @product %>
-// <script
-//   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-//   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-//   data-amount="<%= @product.price %>"
-//   data-image= <%= @product.image_url %>
-//   data-name= "<%= @product.name %>"
-//   data-description= "<%= @product.description %>"
-//   >
-// </script>
->>>>>>> a6a079338d77d5c167b271814d32a32519da5660
 
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key]%>"
-<<<<<<< HEAD
   data-amount="<%= @product.price %>"
   data-name="<%= @product.name %>"
   data-description="<%= @product.description %>"
   data-image=<%= @product.image_url %>>
-=======
-  data-amount="100"
-  data-name="Demo Site"
-  data-description="2 widgets ($20.00)"
-  data-image="/128x128.png">
->>>>>>> a6a079338d77d5c167b271814d32a32519da5660
 </script>
 <%= hidden_field_tag('product_id', @product.id) %>
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> a6a079338d77d5c167b271814d32a32519da5660
