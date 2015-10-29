@@ -44878,3 +44878,74 @@ Processing by PaymentsController#index as HTML
   Rendered payments/index.html.erb within layouts/application (0.9ms)
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
 Completed 200 OK in 130ms (Views: 129.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-29 18:46:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (87.7ms)
+  [1m[35mUser Load (18.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 1677ms (Views: 1621.1ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/products" for ::1 at 2015-10-29 18:46:03 -0500
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (21.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered shared/_product.html.erb (2.9ms)
+  Rendered products/index.html.erb within layouts/application (54.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 248ms (Views: 225.4ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/products/15" for ::1 at 2015-10-29 18:46:10 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (1.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.9ms)
+  [1m[36m (13.6ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 15]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (203.8ms)
+  Rendered products/show.html.erb within layouts/application (230.7ms)
+Completed 200 OK in 555ms (Views: 407.1ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-10-29 18:46:11 -0500
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-10-29 18:46:11 -0500
+
+
+Started POST "/payments/create" for ::1 at 2015-10-29 18:46:34 -0500
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "product_id"=>"15", "stripeToken"=>"tok_171Q6FE0ad1QW4bMJ8eSF7Yq", "stripeTokenType"=>"card", "stripeEmail"=>"chavez.agustin@outlook.com"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (18.0ms)[0m  INSERT INTO "orders" ("total", "product_id", "user_id") VALUES (?, ?, ?)  [["total", 100.0], ["product_id", 15], ["user_id", 1]]
+  [1m[36m (11.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/15
+Completed 302 Found in 1630ms (ActiveRecord: 30.4ms)
+
+
+Started GET "/products/15" for ::1 at 2015-10-29 18:46:36 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.9ms)
+  [1m[35m (0.2ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 15]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0[0m  [["product_id", 15]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 15]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_new_comment.html.erb (10.1ms)
+  Rendered products/show.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 210ms (Views: 202.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-10-29 18:46:36 -0500
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-10-29 18:46:37 -0500
