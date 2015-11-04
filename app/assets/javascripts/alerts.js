@@ -1,3 +1,3 @@
-$(document).ready(function() {
-  $(.alert).delay( 800 ).fadeOut( "slow");
-  });
+// $(document).ready(function() {
+//   $(.alert).delay( 800 ).fadeOut( "slow");
+//   });
