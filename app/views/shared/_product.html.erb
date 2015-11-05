@@ -1,7 +1,7 @@
  <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
+        <td class="Responsive image"><%= image_tag(product.image_url, :style => 'height: 200px; width: 250px;') %> </td>
         <td><%= product.colour %></td>
         <td>$<%= product.price %></td>
         <td><%= link_to 'Show', product %></td>
