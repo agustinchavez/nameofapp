@@ -37,10 +37,8 @@
     </a>
   </div>
 
-  <!--   stripe payment form-->
   <div class="col-md-4">
-   <%= form_tag "/payments/create" do %>
-      <%= hidden_field_tag "product_id", @product.id %>
+    <%= form_tag("/payments/create", remote: true) do %>
       <%= render partial: "shared/stripe_checkout_button" %>
     <% end %>
   </div>

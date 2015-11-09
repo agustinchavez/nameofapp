@@ -1,9 +1,11 @@
+
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+  data-key="<%= Rails.configuration.stripe[:publishable_key]%>"
   data-amount="<%= @product.price %>"
-  data-image= <%= @product.image_url %>
-  data-name= "<%= @product.name %>"
-  data-description= "<%= @product.description %>"
-  >
+  data-name="<%= @product.name %>"
+  data-description="<%= @product.description %>"
+  data-image=<%= @product.image_url %>>
 </script>
+<%= hidden_field_tag('product_id', @product.id) %>
+
