@@ -1,0 +1,733 @@
+
+
+Started GET "/products/14" for ::1 at 2015-11-09 11:11:37 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[35m (0.3ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0[0m  [["product_id", 14]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 14]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_new_comment.html.erb (60.4ms)
+  Rendered products/show.html.erb within layouts/application (76.6ms)
+Completed 200 OK in 771ms (Views: 675.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/jquery.raty.self-7345be7e2af6b2f94668a39037852a3fff3ad5a352fdf787749cb5cb6737f132.css?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/angular.self-5657ace19fa32e4720c470d98deb20d67d0bd0221bdf5a4b447ab31e8249a65b.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/angular-resource.self-a4e7c0b1340d51bfee058d57bf1158ae624372339c3ba2d0f09d9c606a2d37d1.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/app.self-4fa66b05941a51970fb11f3e02d31c76dc5b844672989a27acaf9b6d7fc18ec3.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/site.self-90f436f9e1555cab124452840d75491f573cb29b3205bf1036eb7e7a6a37a6a3.js?body=1" for ::1 at 2015-11-09 11:11:38 -0600
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-11-09 11:11:39 -0600
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-11-09 11:11:39 -0600
+
+
+Started GET "/users" for ::1 at 2015-11-09 11:11:46 -0600
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 205ms (Views: 194.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2015-11-09 11:11:46 -0600
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 221ms (Views: 210.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/11" for ::1 at 2015-11-09 11:11:51 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-09 11:11:51 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 174ms (Views: 172.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-11-09 11:11:58 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 173ms (Views: 163.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for ::1 at 2015-11-09 11:12:03 -0600
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.erb (11.5ms)
+  Rendered users/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 219ms (Views: 209.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-11-09 11:12:06 -0600
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 169ms (Views: 160.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for ::1 at 2015-11-09 11:12:09 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-09 11:12:09 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 177ms (Views: 175.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2015-11-09 11:12:16 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 171ms (Views: 160.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3/edit" for ::1 at 2015-11-09 11:12:23 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-09 11:12:23 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 168ms (Views: 166.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for ::1 at 2015-11-09 11:12:28 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-11-09 11:12:28 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 163ms (Views: 162.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-09 11:12:31 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 181ms (Views: 178.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-09 11:12:37 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9n64ZGmYQwaQu9AxqIfVpHhyzsAcfyazXBA2VIIxm9jvbG6WADltexv0G+6KkOsMXjBGwOLRztSGBPMII84zWQ==", "user"=>{"email"=>"chavezsoccer10@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "chavezsoccer10@hotmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-21 16:27:07.558230"], ["current_sign_in_at", "2015-11-09 17:12:37.426495"], ["sign_in_count", 3], ["updated_at", "2015-11-09 17:12:37.427762"], ["id", 2]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 132ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2015-11-09 11:12:37 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 181ms (Views: 179.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-11-09 11:12:41 -0600
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 168ms (Views: 158.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3" for ::1 at 2015-11-09 11:12:45 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-09 11:12:45 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 175ms (Views: 173.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for ::1 at 2015-11-09 11:12:48 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-09 11:12:48 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 155ms (Views: 153.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-09 11:12:50 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 179ms (Views: 177.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-09 11:12:56 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CYkCXrzL/fwiLDRIzKXmc9uNK2QhJP16n/vMABuXa8yru2dPP6jJqe9Y54Kr28JUXxPVnX06dT1UkTnBXlkYzw==", "user"=>{"email"=>"chavez.agustin@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "chavez.agustin@outlook.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-11-09 17:07:10.625510"], ["current_sign_in_at", "2015-11-09 17:12:57.036216"], ["sign_in_count", 12], ["updated_at", "2015-11-09 17:12:57.037403"], ["id", 1]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 112ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2015-11-09 11:12:57 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 160ms (Views: 159.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2015-11-09 11:13:14 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered shared/_product.html.erb (2.7ms)
+  Rendered products/index.html.erb within layouts/application (6.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 178ms (Views: 176.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for ::1 at 2015-11-09 11:13:36 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.3ms)[0m  SELECT "orders".* FROM "orders"
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered orders/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 557ms (Views: 443.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/orders.json" for ::1 at 2015-11-09 11:13:37 -0600
+Processing by OrdersController#index as JSON
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 76ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products.json" for ::1 at 2015-11-09 11:13:37 -0600
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.json.jbuilder (17.1ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for ::1 at 2015-11-11 12:38:24 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (12.0ms)[0m  SELECT "orders".* FROM "orders"
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered orders/index.html.erb within layouts/application (14.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 1403ms (Views: 1189.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/orders.json" for ::1 at 2015-11-11 12:38:26 -0600
+Processing by OrdersController#index as JSON
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 101ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products.json" for ::1 at 2015-11-11 12:38:26 -0600
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.json.jbuilder (25.4ms)
+Completed 200 OK in 76ms (Views: 72.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/orders/4.json?product=%7B%22name%22:%22Antique+Bike%22%7D&product_id=14&total=0" for ::1 at 2015-11-11 12:38:33 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Antique Bike\"}", "product_id"=>"14", "total"=>"0", "id"=>"4"}
+  [1m[35mOrder Load (0.3ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (22.4ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 4]]
+  [1m[36m (12.5ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 88ms (ActiveRecord: 35.3ms)
+
+
+Started DELETE "/orders/5.json?product=%7B%22name%22:%22Awesome+bike%22%7D&product_id=15&total=100" for ::1 at 2015-11-11 12:38:34 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Awesome bike\"}", "product_id"=>"15", "total"=>"100", "id"=>"5"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 5]]
+  [1m[36m (42.7ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 57ms (ActiveRecord: 44.2ms)
+
+
+Started DELETE "/orders/6.json?product=%7B%22name%22:%22Awesome+bike%22%7D&product_id=15&total=100&user=%7B%22email%22:%22chavez.agustin@outlook.com%22%7D&user_id=1" for ::1 at 2015-11-11 12:38:34 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Awesome bike\"}", "product_id"=>"15", "total"=>"100", "user"=>"{\"email\":\"chavez.agustin@outlook.com\"}", "user_id"=>"1", "id"=>"6"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 6]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 16ms (ActiveRecord: 3.8ms)
+
+
+Started DELETE "/orders/8.json?product=%7B%22name%22:%22Awesome+bike%22%7D&product_id=15&total=100&user=%7B%22email%22:%22chavez.agustin@outlook.com%22%7D&user_id=1" for ::1 at 2015-11-11 12:38:36 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Awesome bike\"}", "product_id"=>"15", "total"=>"100", "user"=>"{\"email\":\"chavez.agustin@outlook.com\"}", "user_id"=>"1", "id"=>"8"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 8]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 17ms (ActiveRecord: 3.3ms)
+
+
+Started DELETE "/orders/10.json?product=%7B%22name%22:%22Awesome+bike%22%7D&product_id=15&total=100&user=%7B%22email%22:%22chavez.agustin@outlook.com%22%7D&user_id=1" for ::1 at 2015-11-11 12:38:37 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Awesome bike\"}", "product_id"=>"15", "total"=>"100", "user"=>"{\"email\":\"chavez.agustin@outlook.com\"}", "user_id"=>"1", "id"=>"10"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 10]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 16ms (ActiveRecord: 3.3ms)
+
+
+Started DELETE "/orders/15.json?product=%7B%22name%22:%22Awesome+bike%22%7D&product_id=15&total=100&user=%7B%22email%22:%22chavez.agustin@outlook.com%22%7D&user_id=1" for ::1 at 2015-11-11 12:38:41 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Awesome bike\"}", "product_id"=>"15", "total"=>"100", "user"=>"{\"email\":\"chavez.agustin@outlook.com\"}", "user_id"=>"1", "id"=>"15"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 15]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 18ms (ActiveRecord: 4.2ms)
+
+
+Started DELETE "/orders/14.json?product=%7B%22name%22:%22Awesome+bike%22%7D&product_id=15&total=100&user=%7B%22email%22:%22chavez.agustin@outlook.com%22%7D&user_id=1" for ::1 at 2015-11-11 12:38:42 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Awesome bike\"}", "product_id"=>"15", "total"=>"100", "user"=>"{\"email\":\"chavez.agustin@outlook.com\"}", "user_id"=>"1", "id"=>"14"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 14]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 18ms (ActiveRecord: 3.4ms)
+
+
+Started DELETE "/orders/13.json?product=%7B%22name%22:%22Awesome+bike%22%7D&product_id=15&total=100&user=%7B%22email%22:%22chavez.agustin@outlook.com%22%7D&user_id=1" for ::1 at 2015-11-11 12:38:43 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Awesome bike\"}", "product_id"=>"15", "total"=>"100", "user"=>"{\"email\":\"chavez.agustin@outlook.com\"}", "user_id"=>"1", "id"=>"13"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 13]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 19ms (ActiveRecord: 2.3ms)
+
+
+Started DELETE "/orders/12.json?product=%7B%22name%22:%22Awesome+bike%22%7D&product_id=15&total=100&user=%7B%22email%22:%22chavez.agustin@outlook.com%22%7D&user_id=1" for ::1 at 2015-11-11 12:38:43 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Awesome bike\"}", "product_id"=>"15", "total"=>"100", "user"=>"{\"email\":\"chavez.agustin@outlook.com\"}", "user_id"=>"1", "id"=>"12"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 12]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 15ms (ActiveRecord: 3.5ms)
+
+
+Started DELETE "/orders/11.json?product=%7B%22name%22:%22Awesome+bike%22%7D&product_id=15&total=100&user=%7B%22email%22:%22chavez.agustin@outlook.com%22%7D&user_id=1" for ::1 at 2015-11-11 12:38:44 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Awesome bike\"}", "product_id"=>"15", "total"=>"100", "user"=>"{\"email\":\"chavez.agustin@outlook.com\"}", "user_id"=>"1", "id"=>"11"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 11]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 48ms (ActiveRecord: 4.2ms)
+
+
+Started DELETE "/orders/9.json?product=%7B%22name%22:%22Awesome+bike%22%7D&product_id=15&total=100&user=%7B%22email%22:%22chavez.agustin@outlook.com%22%7D&user_id=1" for ::1 at 2015-11-11 12:38:45 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Awesome bike\"}", "product_id"=>"15", "total"=>"100", "user"=>"{\"email\":\"chavez.agustin@outlook.com\"}", "user_id"=>"1", "id"=>"9"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 9]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 17ms (ActiveRecord: 3.0ms)
+
+
+Started DELETE "/orders/7.json?product=%7B%22name%22:%22Awesome+bike%22%7D&product_id=15&total=100&user=%7B%22email%22:%22chavez.agustin@outlook.com%22%7D&user_id=1" for ::1 at 2015-11-11 12:38:47 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product"=>"{\"name\":\"Awesome bike\"}", "product_id"=>"15", "total"=>"100", "user"=>"{\"email\":\"chavez.agustin@outlook.com\"}", "user_id"=>"1", "id"=>"7"}
+  [1m[35mOrder Load (0.3ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 7]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 18ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/orders" for ::1 at 2015-11-11 12:40:54 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered orders/index.html.erb within layouts/application (2.1ms)
+ng-skip: /Users/agustinchavez/Desktop/nameofapp/app/assets/javascripts/application.js
+ng-ignore: /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/jquery-rails-4.0.5/vendor/assets/javascripts/jquery.js
+ng-ignore: /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/angularjs-rails-1.4.7/vendor/assets/javascripts/angular.js
+ng-ignore: /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/angularjs-rails-1.4.7/vendor/assets/javascripts/angular-resource.js
+ng-ignore: /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/jquery-rails-4.0.5/vendor/assets/javascripts/jquery_ujs.js
+ng-skip: /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks.js.coffee
+ng-skip: /Users/agustinchavez/Desktop/nameofapp/app/assets/javascripts/app.js
+ng-skip: /Users/agustinchavez/Desktop/nameofapp/app/assets/javascripts/comments.coffee
+ng-skip: /Users/agustinchavez/Desktop/nameofapp/app/assets/javascripts/jquery.elevateZoom-3.0.8.min.js
+ng-skip: /Users/agustinchavez/Desktop/nameofapp/app/assets/javascripts/jquery.raty.js
+ng-skip: /Users/agustinchavez/Desktop/nameofapp/app/assets/javascripts/payments.coffee
+ng-skip: /Users/agustinchavez/Desktop/nameofapp/app/assets/javascripts/products.coffee
+ng-skip: /Users/agustinchavez/Desktop/nameofapp/app/assets/javascripts/site.js
+ng-skip: /Users/agustinchavez/Desktop/nameofapp/app/assets/javascripts/static_pages.coffee
+ng-skip: /Users/agustinchavez/Desktop/nameofapp/app/assets/javascripts/users.coffee
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 1747ms (Views: 1683.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/jquery.raty.self-7345be7e2af6b2f94668a39037852a3fff3ad5a352fdf787749cb5cb6737f132.css?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/angular-resource.self-a4e7c0b1340d51bfee058d57bf1158ae624372339c3ba2d0f09d9c606a2d37d1.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/angular.self-5657ace19fa32e4720c470d98deb20d67d0bd0221bdf5a4b447ab31e8249a65b.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/app.self-4fa66b05941a51970fb11f3e02d31c76dc5b844672989a27acaf9b6d7fc18ec3.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/site.self-90f436f9e1555cab124452840d75491f573cb29b3205bf1036eb7e7a6a37a6a3.js?body=1" for ::1 at 2015-11-11 12:40:56 -0600
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-11-11 12:40:57 -0600
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 12:40:57 -0600
+
+
+Started GET "/orders.json" for ::1 at 2015-11-11 12:40:57 -0600
+Processing by OrdersController#index as JSON
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products.json" for ::1 at 2015-11-11 12:40:57 -0600
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.json.jbuilder (24.6ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/orders/1.json?product_id=1" for ::1 at 2015-11-11 12:41:01 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product_id"=>"1", "id"=>"1"}
+  [1m[35mOrder Load (0.4ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 1]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 26ms (ActiveRecord: 3.6ms)
+
+
+Started DELETE "/orders/2.json?product_id=1" for ::1 at 2015-11-11 12:41:01 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product_id"=>"1", "id"=>"2"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 2]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 19ms (ActiveRecord: 4.2ms)
+
+
+Started DELETE "/orders/3.json?product_id=1" for ::1 at 2015-11-11 12:41:02 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"product_id"=>"1", "id"=>"3"}
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = ?  [["id", 3]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 18ms (ActiveRecord: 4.2ms)
+
+
+Started POST "/orders.json" for ::1 at 2015-11-11 12:41:11 -0600
+Processing by OrdersController#create as JSON
+  Parameters: {"product_id"=>"14", "total"=>0.02, "order"=>{"product_id"=>"14", "total"=>0.02}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "orders" ("product_id", "total") VALUES (?, ?)[0m  [["product_id", 14], ["total", 0.02]]
+  [1m[35m (3.1ms)[0m  commit transaction
+Completed 201 Created in 20ms (Views: 1.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/orders/16.json" for ::1 at 2015-11-11 12:41:11 -0600
+Processing by OrdersController#show as JSON
+  Parameters: {"id"=>"16"}
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/orders/16.json?$promise=%7B%7D&$resolved=true&product=%7B%22name%22:%22Antique+Bike%22%7D&product_id=14&total=0.02" for ::1 at 2015-11-11 12:41:14 -0600
+Processing by OrdersController#destroy as JSON
+  Parameters: {"$promise"=>"{}", "$resolved"=>"true", "product"=>"{\"name\":\"Antique Bike\"}", "product_id"=>"14", "total"=>"0.02", "id"=>"16"}
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 16]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Completed 204 No Content in 16ms (ActiveRecord: 3.4ms)
