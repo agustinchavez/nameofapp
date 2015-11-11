@@ -731,3 +731,317 @@ Processing by OrdersController#destroy as JSON
   [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 16]]
   [1m[35m (2.8ms)[0m  commit transaction
 Completed 204 No Content in 16ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/orders" for ::1 at 2015-11-11 13:02:42 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 212ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2015-11-11 13:02:43 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 490ms (Views: 488.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-11 13:03:04 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 229ms (Views: 228.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.raty.self-7345be7e2af6b2f94668a39037852a3fff3ad5a352fdf787749cb5cb6737f132.css?body=1" for ::1 at 2015-11-11 13:03:04 -0600
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-11 13:03:04 -0600
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-11-11 13:03:04 -0600
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-11-11 13:03:04 -0600
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-11-11 13:03:04 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/angular-resource.self-a4e7c0b1340d51bfee058d57bf1158ae624372339c3ba2d0f09d9c606a2d37d1.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/angular.self-5657ace19fa32e4720c470d98deb20d67d0bd0221bdf5a4b447ab31e8249a65b.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/app.self-4fa66b05941a51970fb11f3e02d31c76dc5b844672989a27acaf9b6d7fc18ec3.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/site.self-90f436f9e1555cab124452840d75491f573cb29b3205bf1036eb7e7a6a37a6a3.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-11-11 13:03:05 -0600
+
+
+Started GET "/" for ::1 at 2015-11-11 13:03:09 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 167ms (Views: 166.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.raty.self-7345be7e2af6b2f94668a39037852a3fff3ad5a352fdf787749cb5cb6737f132.css?body=1" for ::1 at 2015-11-11 13:03:09 -0600
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-11-11 13:03:09 -0600
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-11 13:03:09 -0600
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-11-11 13:03:09 -0600
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-11-11 13:03:09 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/angular.self-5657ace19fa32e4720c470d98deb20d67d0bd0221bdf5a4b447ab31e8249a65b.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/angular-resource.self-a4e7c0b1340d51bfee058d57bf1158ae624372339c3ba2d0f09d9c606a2d37d1.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/app.self-4fa66b05941a51970fb11f3e02d31c76dc5b844672989a27acaf9b6d7fc18ec3.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/site.self-90f436f9e1555cab124452840d75491f573cb29b3205bf1036eb7e7a6a37a6a3.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-11 13:03:10 -0600
+
+
+Started GET "/orders" for ::1 at 2015-11-11 13:03:13 -0600
+Processing by OrdersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for ::1 at 2015-11-11 13:03:14 -0600
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-11 13:03:14 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 177ms (Views: 175.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2015-11-11 13:03:19 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered shared/_product.html.erb (4.7ms)
+  Rendered products/index.html.erb within layouts/application (58.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 233ms (Views: 231.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/15" for ::1 at 2015-11-11 13:03:27 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.8ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 15]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 15]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered shared/_new_comment.html.erb (100.5ms)
+  Rendered products/show.html.erb within layouts/application (124.1ms)
+Completed 200 OK in 449ms (Views: 327.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-11-11 13:03:27 -0600
+
+
+Started GET "/assets/star-half.png" for ::1 at 2015-11-11 13:03:27 -0600
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-11-11 13:03:27 -0600
+
+
+Started POST "/products/15/comments" for ::1 at 2015-11-11 13:03:37 -0600
+Processing by CommentsController#create as JS
+  Parameters: {"utf8"=>"✓", "comment"=>{"body"=>"cool", "rating"=>"5"}, "commit"=>"Submit", "product_id"=>"15"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "comments" ("body", "rating", "product_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["body", "cool"], ["rating", 5], ["product_id", 15], ["user_id", 1], ["created_at", "2015-11-11 19:03:37.287486"], ["updated_at", "2015-11-11 19:03:37.287486"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered comments/_comment.html.erb (1.2ms)
+  Rendered comments/create.js.erb (5.5ms)
+Completed 200 OK in 56ms (Views: 44.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/orders" for ::1 at 2015-11-11 13:03:45 -0600
+Processing by OrdersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-11 13:03:45 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 180ms (Views: 179.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for ::1 at 2015-11-11 13:04:05 -0600
+Processing by OrdersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-11 13:04:05 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 199ms (Views: 197.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for ::1 at 2015-11-11 13:04:18 -0600
+Processing by OrdersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-11-11 13:04:19 -0600
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 183ms (Views: 181.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for ::1 at 2015-11-11 13:04:50 -0600
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.5ms)[0m  SELECT "orders".* FROM "orders"
+  Rendered orders/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 210ms (Views: 203.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/orders.json" for ::1 at 2015-11-11 13:04:51 -0600
+Processing by OrdersController#index as JSON
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products.json" for ::1 at 2015-11-11 13:04:51 -0600
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.json.jbuilder (17.2ms)
+Completed 200 OK in 42ms (Views: 30.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/orders.json" for ::1 at 2015-11-11 13:05:01 -0600
+Processing by OrdersController#create as JSON
+  Parameters: {"product_id"=>"14", "total"=>0.01, "order"=>{"product_id"=>"14", "total"=>0.01}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "orders" ("product_id", "total") VALUES (?, ?)[0m  [["product_id", 14], ["total", 0.01]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Completed 201 Created in 25ms (Views: 1.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/orders/17.json" for ::1 at 2015-11-11 13:05:01 -0600
+Processing by OrdersController#show as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+Completed 200 OK in 28ms (Views: 0.4ms | ActiveRecord: 0.6ms)
