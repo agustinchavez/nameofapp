@@ -1,8 +1,5 @@
 var app = angular.module('shop', ['ngResource']);
 
-$(document).on('ready page:load', function() {
-  angular.bootstrap(document, ['shop'])
-});
 
 app.factory('models', ['$resource', function($resource){
   var orders_model = $resource("/orders/:id.json", {id: "@id"});
