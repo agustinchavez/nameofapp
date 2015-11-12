@@ -1116,3 +1116,77 @@ ActionController::RoutingError (No route matches [DELETE] "/orders.json"):
   Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
   Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (282.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-11 13:34:15 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 785ms (Views: 758.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/orders" for ::1 at 2015-11-11 13:34:17 -0600
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered orders/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 489ms (Views: 437.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/orders.json" for ::1 at 2015-11-11 13:34:18 -0600
+Processing by OrdersController#index as JSON
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders"
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products.json" for ::1 at 2015-11-11 13:34:18 -0600
+Processing by ProductsController#index as JSON
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.json.jbuilder (45.7ms)
+Completed 200 OK in 85ms (Views: 82.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/orders.json" for ::1 at 2015-11-11 13:37:57 -0600
+Processing by OrdersController#create as JSON
+  Parameters: {"product_id"=>"15", "total"=>0.1, "order"=>{"product_id"=>"15", "total"=>0.1}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "orders" ("product_id", "total") VALUES (?, ?)  [["product_id", 15], ["total", 0.1]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 24ms (Views: 1.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/orders/18.json" for ::1 at 2015-11-11 13:37:57 -0600
+Processing by OrdersController#show as JSON
+  Parameters: {"id"=>"18"}
+  [1m[35mOrder Load (0.3ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 15]]
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/orders" for ::1 at 2015-11-12 10:43:21 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.3ms)[0m  SELECT "orders".* FROM "orders"
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered orders/index.html.erb within layouts/application (15.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1108ms (Views: 982.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/orders.json" for ::1 at 2015-11-12 10:43:23 -0600
+Processing by OrdersController#index as JSON
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders"
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 15]]
+Completed 200 OK in 77ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products.json" for ::1 at 2015-11-12 10:43:23 -0600
+Processing by ProductsController#index as JSON
+  [1m[36mProduct Load (1.5ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.json.jbuilder (33.0ms)
+Completed 200 OK in 85ms (Views: 82.2ms | ActiveRecord: 1.5ms)
