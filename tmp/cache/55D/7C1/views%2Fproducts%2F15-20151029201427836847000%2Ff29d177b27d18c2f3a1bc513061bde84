@@ -1,0 +1,11 @@
+o: ActiveSupport::Cache::Entry:@valueI"Õ     <tr>
+    <td>Awesome bike</td>
+    <td>old and awesome</td>
+    <td class="Responsive image"><img style="height: 200px; width: 250px;" src="https://s3.amazonaws.com/agustinchavez.ninja/127H.jpg" alt="127h" /> </td>
+    <td>gray</td>
+    <td>$</td>
+    <td><a href="/products/15">Show</a></td>
+    <td><a href="/products/15/edit">Edit</a></td>
+    <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/products/15">Destroy</a></td>
+  </tr>
+:ET:@created_atf1447353695.9865851:@expires_in0
