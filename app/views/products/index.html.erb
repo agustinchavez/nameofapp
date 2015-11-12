@@ -15,7 +15,11 @@
   </thead>
 
   <tbody>
+    <% @products.each do |product| %>
+    <% cache(product) do %>
     <%= render partial: "shared/product", collection: @products %>
+    <% end %>
+    <% end %>
   </tbody>
 </table>
 
