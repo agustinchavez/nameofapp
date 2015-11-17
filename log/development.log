@@ -2172,3 +2172,268 @@ Read fragment views/products/15-20151029201427836847000/products/17-201511121842
   Rendered products/index.html.erb within layouts/application (5.8ms)
   [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
 Completed 200 OK in 185ms (Views: 183.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-17 11:29:21 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 1768ms (Views: 1741.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products" for ::1 at 2015-11-17 11:29:27 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Cache digest for app/views/shared/_product.html.erb: 349825cc3d8580725f2f53bbb6e7b351
+  Cache digest for app/views/products/index.html.erb: f29d177b27d18c2f3a1bc513061bde84
+Read fragment views/products/15-20151029201427836847000/products/17-20151112184207927320000/f29d177b27d18c2f3a1bc513061bde84 (57.0ms)
+  Rendered shared/_product.html.erb (3.1ms)
+Write fragment views/products/15-20151029201427836847000/products/17-20151112184207927320000/f29d177b27d18c2f3a1bc513061bde84 (19.1ms)
+  Rendered products/index.html.erb within layouts/application (110.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 282ms (Views: 278.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/17" for ::1 at 2015-11-17 11:29:34 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (33.7ms)
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)):
+    25:     <p>
+    26:       <strong>Price:</strong>
+    27:       $<%= @product.price %>
+    28:       <%= @product.get_views_product(@product.id) %>
+    29:     </p>
+    30:   </div>
+    31: 
+  app/models/product.rb:23:in `get_views_product'
+  app/views/products/show.html.erb:28:in `_app_views_products_show_html_erb__2038506417488453254_70283582616220'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (37.6ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (203.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (98.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (260.7ms)
+
+
+Started GET "/products/17" for ::1 at 2015-11-17 11:29:35 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (19.7ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)):
+    25:     <p>
+    26:       <strong>Price:</strong>
+    27:       $<%= @product.price %>
+    28:       <%= @product.get_views_product(@product.id) %>
+    29:     </p>
+    30:   </div>
+    31: 
+  app/models/product.rb:23:in `get_views_product'
+  app/views/products/show.html.erb:28:in `_app_views_products_show_html_erb__2038506417488453254_70283622303600'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.3ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.4ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (118.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (95.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (206.3ms)
+
+
+Started GET "/products/17" for ::1 at 2015-11-17 11:30:19 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 2.2ms)
+
+ActionView::Template::Error (undefined method `get_views_product' for #<Product:0x007fd857fe4ed0>):
+    25:     <p>
+    26:       <strong>Price:</strong>
+    27:       $<%= @product.price %>
+    28:       <%= @product.get_views_product(@product.id) %>
+    29:     </p>
+    30:   </div>
+    31: 
+  app/views/products/show.html.erb:28:in `_app_views_products_show_html_erb__2038506417488453254_70283622303600'
+
+
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (124.5ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (90.2ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/agustinchavez/.rvm/gems/ruby-2.2.1-v/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (201.3ms)
+
+
+Started GET "/products/17" for ::1 at 2015-11-17 11:31:01 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (1.5ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 17]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 1 OFFSET 0  [["product_id", 17]]
+  Rendered shared/_new_comment.html.erb (89.0ms)
+  Rendered products/show.html.erb within layouts/application (103.2ms)
+Completed 200 OK in 305ms (Views: 297.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.raty.self-7345be7e2af6b2f94668a39037852a3fff3ad5a352fdf787749cb5cb6737f132.css?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/products.self-5b9814cfb8ef426b4154a6740287a4d88554b0372c308585bca2db9c75874cfc.css?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/static_pages.self-dff11d66f8e82bba2bda86cf5a59154495ecdede2632c4fc7c73ff65ad8d67e3.css?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/scaffolds.self-bd9f3558b008fb60e8457d9b8717b2cbbdb7fac45730f7e1e17a7a71c1582a17.css?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/angular.self-5657ace19fa32e4720c470d98deb20d67d0bd0221bdf5a4b447ab31e8249a65b.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/angular-resource.self-a4e7c0b1340d51bfee058d57bf1158ae624372339c3ba2d0f09d9c606a2d37d1.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/app.self-272c6d1c990475946fd84da476df2685d1c41b3d9575e5328a3c5dd50ce3b8f8.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/site.self-90f436f9e1555cab124452840d75491f573cb29b3205bf1036eb7e7a6a37a6a3.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/angular-resource.self-a4e7c0b1340d51bfee058d57bf1158ae624372339c3ba2d0f09d9c606a2d37d1.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/app.self-272c6d1c990475946fd84da476df2685d1c41b3d9575e5328a3c5dd50ce3b8f8.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/jquery.elevateZoom-3.0.8.min.self-d7f403d8b7cda26e041da059f49ef918b30e898c3635d4a252bc66a4978fdbfc.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/site.self-90f436f9e1555cab124452840d75491f573cb29b3205bf1036eb7e7a6a37a6a3.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2015-11-17 11:31:02 -0600
+
+
+Started GET "/assets/star-off.png" for ::1 at 2015-11-17 11:31:03 -0600
+
+
+Started GET "/assets/star-on.png" for ::1 at 2015-11-17 11:31:07 -0600
+
+
+Started GET "/products" for ::1 at 2015-11-17 11:31:12 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Cache digest for app/views/shared/_product.html.erb: 349825cc3d8580725f2f53bbb6e7b351
+  Cache digest for app/views/products/index.html.erb: f29d177b27d18c2f3a1bc513061bde84
+Read fragment views/products/15-20151029201427836847000/products/17-20151112184207927320000/f29d177b27d18c2f3a1bc513061bde84 (17.1ms)
+  Rendered shared/_product.html.erb (2.2ms)
+Write fragment views/products/15-20151029201427836847000/products/17-20151112184207927320000/f29d177b27d18c2f3a1bc513061bde84 (17.9ms)
+  Rendered products/index.html.erb within layouts/application (46.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 225ms (Views: 222.5ms | ActiveRecord: 0.4ms)
