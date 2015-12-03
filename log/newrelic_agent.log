@@ -21,3 +21,51 @@
 [2015-11-17 11:29:14 -0600 Agustins-MacBook-Pro.local (28946)] INFO : Doing deferred dependency-detection before Rack startup
 [2015-11-17 11:29:16 -0600 Agustins-MacBook-Pro.local (28946)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1151602/applications/12519573
 [2015-11-17 11:31:21 -0600 Agustins-MacBook-Pro.local (28946)] INFO : Starting Agent shutdown
+[2015-12-03 10:49:16 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-03 10:49:16 -0600 Agustins-MacBook-Pro.local (21245)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-03 10:49:16 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Reading configuration from config/newrelic.yml (/Users/agustinchavez/Desktop/nameofapp)
+[2015-12-03 10:49:16 -0600 Agustins-MacBook-Pro.local (21245)] INFO : New Relic Agent Developer Mode enabled.
+[2015-12-03 10:49:16 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Environment: development
+[2015-12-03 10:49:16 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Dispatcher: webrick
+[2015-12-03 10:49:16 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Application: My Application (Development)
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Installing ActiveJob instrumentation
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Installing Memcache instrumentation for dalli gem
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Installing Net instrumentation
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Installing deferred Rack instrumentation
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Installing Redis Instrumentation
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Installing Rails 4 view instrumentation
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-03 10:49:17 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Finished instrumentation
+[2015-12-03 10:49:19 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-03 10:49:19 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1151602/applications/12519573
+[2015-12-03 10:50:33 -0600 Agustins-MacBook-Pro.local (21245)] INFO : Starting Agent shutdown
+[2015-12-03 10:50:46 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-03 10:50:46 -0600 Agustins-MacBook-Pro.local (21303)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-03 10:50:46 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Reading configuration from config/newrelic.yml (/Users/agustinchavez/Desktop/nameofapp)
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : New Relic Agent Developer Mode enabled.
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Environment: development
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Dispatcher: webrick
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Application: My Application (Development)
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Installing ActiveJob instrumentation
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Installing Memcache instrumentation for dalli gem
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Installing Net instrumentation
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Installing deferred Rack instrumentation
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Installing Redis Instrumentation
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Installing Rails 4 view instrumentation
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Finished instrumentation
+[2015-12-03 10:50:47 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-03 10:50:49 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1151602/applications/12519573
+[2015-12-03 13:43:56 -0600 Agustins-MacBook-Pro.local (21303)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2015-12-03 13:43:56 -0600 Agustins-MacBook-Pro.local (21303)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-123.newrelic.com:443 after 0.001826 seconds: getaddrinfo: nodename nor servname provided, or not known
+[2015-12-03 15:27:46 -0600 Agustins-MacBook-Pro.local (21303)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2015-12-03 15:27:46 -0600 Agustins-MacBook-Pro.local (21303)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-123.newrelic.com:443 after 0.001234 seconds: getaddrinfo: nodename nor servname provided, or not known
+[2015-12-03 16:40:39 -0600 Agustins-MacBook-Pro.local (21303)] INFO : Starting Agent shutdown

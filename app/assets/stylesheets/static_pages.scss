@@ -2,19 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
+.container {
+  height: 100%;
+  background: url(bicyclistsmovement.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+}
+
+.transparent {
+  margin-left: 25%;
+  margin-right:25%;
   font-family: "Times New Roman", Times, serif;
   font-style: oblique;
-  color: #CC3300;
   text-align: center;
+  width: 45%;
+  margin-top: 10%;
+  margin-bottom:50%;
+}
+
+.transparent h1 {
+  color: #CC3300;
   font-size: 4em;
 }
 
-h2 {
-  font-family: "Times New Roman", Times, serif;
-  //font-style: oblique;
+.transparent h2 {
   color: #E65C00;
-  text-align: center;
   font-size: 2em;
   padding-bottom:3%;
 }
@@ -23,36 +36,89 @@ p {
   text-align: center;
 }
 
-.style_image {
-  width: 30%;
-  height: 30%;
-  margin-left:35%;
-  padding: 10px;
-  border:3px solid #CC3300;
-}
-
-.nav li {
-  display:inline-block;
-  padding: 1%;
+.navbar-default {
+  background-color: #660000;
+  margin-bottom: 0%;
 }
 
 .navbar-form, .navbar-left {
-  margin-top: 2%;
-  color:red;
-  padding: 0%;
+  margin-top: 1%;
+  color:#990000;
 }
 
-.row {
-  margin-top: 2%;
-  color:red;
-  padding: 0%;
-  text-align: center;
+.navbar-brand {
+  list-style-type: none;
 }
 
 .col-md-4, .contact-btn {
   margin-left: 30%;
 }
 
+.contact-background {
+  margin-top: 0%;
+  height: 100%;
+  background: url(road-bike.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+}
 
+.row {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom:20%;
+  color:red;
+  padding: 0%;
+  text-align: left;
+  width: 45%;
+  z-index: 1;
+}
 
+.headline{
+  margin-left: 6%;
+  padding-top: 8%;
+  margin-top: 0%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 5em;
+  color: #990000;
+}
+
+.about-background {
+  margin-top: 0%;
+  height: 100%;
+  background: url(tour-de-france.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+}
+
+.about {
+  margin-top: -3%;
+  margin-left: auto;
+  margin-right:auto;
+  margin-bottom:15%;
+  padding-top: 15%;
+  text-align: center;
+  width: 45%;
+  z-index: 1;
+
+}
+
+.about h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 5em;
+  color: #990000;
+  background:#7f7f7f;
+  background:rgba(255,255,255,0.5);
+}
+
+.about p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.10em;
+  color: #cc0000;
+  font-weight: bold;
+  background:#7f7f7f;
+  background:rgba(255,255,255,0.5);
+}
 
