@@ -1,30 +1,6 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-table{
-  font-size:2em;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 5%;
-}
-
-table, th, td {
-   border: 5px solid black;
-}
-
-th {
-    height: 2em;
-    text-align: center;
-    background-color: #CC3300;
-    color: white;
-}
-
-td {
-    padding: 5em;
-    color: red;
-    font-size:2em;
-    text-align: left;
-}
+// You can use Sass (SCSS) here: http://sass-lang.com
 
 .field {
     text-align: center;
@@ -32,7 +8,7 @@ td {
 }
 
 .actions {
-    text-align: center;
+  text-align: center;
 }
 
 .col-md-4 p {
@@ -43,3 +19,69 @@ td {
 .thumbnail {
   margin-left:25%;
 }
+
+.image {
+  border-style: inset;
+  border-width: 5px;
+  border-color: #990000;
+}
+
+.products-list {
+  list-style-type: none;
+  display:inline;
+}
+
+.row-bootsrap {
+  padding-left:3%;
+  width:45%;
+}
+
+.products-description p {
+  text-align: left;
+}
+
+.products-description {
+  list-style-type: none;
+  margin-top: 10%;
+}
+
+.products-background {
+  margin-top: 0%;
+  background-color: #bdbdbd;
+  position:absolute;
+}
+
+.products-page-side-picture {
+  position: absolute;
+  margin-top: 20%;
+  width: 40%;
+  margin-left: -40%;
+}
+
+.picture-products {
+  border-radius: 25px;
+  border: 3px solid #990000;
+  margin-top: 10%;
+}
+
+.products-display p {
+  font-family: 'Josefin Slab', serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 10%;
+}
+
+.products-description p {
+  font-family: 'Patua One', cursive;
+}
+
+.products-labels {
+  font-family: "Verdana";
+  font-size: 1.2em;
+}
+
+.new-product-btn {
+  margin-bottom:10%;
+  margin-left:50%;
+}
+
