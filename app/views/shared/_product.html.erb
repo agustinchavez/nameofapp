@@ -1,10 +1,15 @@
- <tr>
-    <td><%= product.name %></td>
-    <td><%= product.description %></td>
-    <td class="Responsive image"><%= image_tag(product.image_url, :style => 'height: 200px; width: 250px;') %> </td>
-    <td><%= product.colour %></td>
-    <td>$<%= product.price %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+ <ul class="products-list">
+    <li class="products-display">
+    <p><%= product.name %></p>
+    <li class="Responsive image"><%= image_tag(product.image_url, :style => 'height: 100%; width: 100%;') %></li>
+    <ul class="products-description">
+      <li><p><strong class="products-labels">Description: </strong><br> <%= product.description %></p></li>
+      <li><p><strong class="products-labels">Color: </strong><%= product.colour %></p></li>
+      <li><p><strong class="products-labels">Price: </strong>$<%= product.price %></p></li>
+      <li>
+        <%= link_to 'Show', product %>
+        <%= link_to 'Edit', edit_product_path(product) %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </li>
+    </li>
+  </ul>
