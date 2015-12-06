@@ -1,63 +1,68 @@
-<p id="notice"><%= notice %></p>
+<div class="products-show-page">
+  <p id="notice"><%= notice %></p>
 
-<div class="row">
-  <div class="col-md-4">
-    <p>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    </p>
+  <div class="row-products-show">
+    <div class="col-md-6" id="products-show-image">
+        <a href="<%= @product.image_url %>" class="thumbnail" alt="Responsive image">
+        <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: @product.image_url) %>
+        </a>
+    </div>
+
+    <div class="col-md-6" id="products-show-information">
+      <div class="col-md-4" id="products-show-item-information">
+        <p>
+          <strong>Name:</strong>
+          <%= @product.name %>
+        </p>
+      </div>
+
+      <div class="col-md-4" id="products-show-item-information">
+        <p>
+          <strong>Description:</strong><br>
+          <%= @product.description %>
+        </p>
+      </div>
+
+      <div class="col-md-4" id="products-show-item-information">
+        <p>
+          <strong>Colour:</strong>
+          <%= @product.colour %>
+        </p>
+      </div>
+
+      <div class="col-md-4" id="products-show-item-information">
+        <p>
+          <strong>Price:</strong>
+          $<%= @product.price %>
+        </p>
+      </div>
+
+      <div class="col-md-4" id="products-show-item-information">
+        <%= form_tag("/payments/create", remote: true) do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+      </div>
+
+      <div class="col-md-4" id="products-show-item-information">
+        <p class="avg-rating">Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div>
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div class="col-md-4">
-    <p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
+    <div class="col-md-4" id="products-show-comments">
+      <%= render 'shared/new_comment' %>
+    </div>
+
+
+    <div class="col-md-4">
+      <button type="submit" class="btn btn-default">
+        <%= link_to 'Edit', edit_product_path(@product) %>
+      </button>|
+      <button type="submit" class="btn btn-default">
+        <%= link_to 'Back', products_path %>
+      </button>
+    </div>
+
+
   </div>
-
-  <div class="col-md-4">
-    <p>
-      <strong>Colour:</strong>
-      <%= @product.colour %>
-    </p>
-  </div>
-  <div class="col-md-4">
-    <p>
-      <strong>Price:</strong>
-      $<%= @product.price %>
-
-    </p>
-  </div>
-
-  <div class="col-md-4">
-    <p>
-      <strong>Image:</strong>
-    </p>
-    <a href="<%= @product.image_url %>" class="thumbnail" alt="Responsive image">
-      <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: @product.image_url) %>
-    </a>
-  </div>
-
-  <div class="col-md-4">
-    <%= form_tag("/payments/create", remote: true) do %>
-      <%= render partial: "shared/stripe_checkout_button" %>
-    <% end %>
-  </div>
-
-  <div class="col-md-4">
-    <p class="avg-rating">Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-  </div>
-
-  <div class="col-md-4">
-    <%= render 'shared/new_comment' %>
-  </div>
-
-
-  <div class="col-md-4">
-    <button type="submit" class="btn btn-default"><%= link_to 'Edit', edit_product_path(@product) %></button>|
-    <button type="submit" class="btn btn-default"><%= link_to 'Back', products_path %></button>
-  </div>
-
-
-</div>
-
