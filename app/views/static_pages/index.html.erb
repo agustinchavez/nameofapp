@@ -1,9 +1,52 @@
 
 <div class="container">
-  <div class="transparent">
-    <h1>Welcome to Bikes Chicago</h1>
-    <h2>Your source for used Bikes in Chicago!</h2>
+  <div class="video-banner">
+    <video autoplay loop muted>
+      <source src="<%= asset_path('bicyclist.mp4') %>" type="video/mp4">
+    </video>
+    <section id="logo-text">
+      <h1 id="logo-title">Welcome to Bikes Chicago</h1>
+      <h2 id="logo-subtitle">Your source for used Bikes in Chicago!</h2>
+    </section>
   </div>
+
+
+  <div class="whois">
+    <div class="row">
+      <div class="col-md-2">
+        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+      </div>
+      <div class="col-md-10">
+        <h1 id="whoistext"><strong>Who</strong> is Bikes Chicago?</h1>
+        <h4 id="whoispara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="row landing_services">
+
+    <div class="col-md-4 indiv_serv">
+          <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+          <h2>Repair</h2>
+          <p id="design-description">Bring in your old broken bike, and we'll help you fix it!</p>
+        </div>
+        <div class="col-md-4 indiv_serv">
+
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <h2>Sell New</h2>
+          <p id="develop-description">We've got a wide variety of new bikes, just come on in, and see which one you like.</p>
+
+        </div>
+        <div class="col-md-4 indiv_serv">
+          <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+          <h2>Sell Used</h2>
+          <p id="deploy-description">Looking for old reliable? Come find one of our certified refurbished bikes, guaranteed to last as long as you do!</p>
+        </div>
+
+  </div>
+
 </div>
+
+
 
 

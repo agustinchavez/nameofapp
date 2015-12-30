@@ -3,11 +3,112 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .container {
+  width: 100%;
   height: 100%;
-  background: url(bicyclistsmovement.jpg) ;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width:100%;
+}
+
+.video-banner {
+  height: 40em;
+}
+
+video {
+  object-fit: fill;
+  margin-top: 0%;
+  margin-left: -2%;
+  width: 103%    !important;
+  height: inherit   !important;
+}
+
+#logo-text {
+  position: absolute;
+  margin-top: -30%;
+  margin-left: 24%;
+  z-index: 4;
+}
+
+#logo-title {
+  font-size: 4em;
+  font-weight: bolder;
+  color: #87232D;
+}
+
+#logo-subtitle {
+  font-size: 2em;
+  font-weight: bolder;
+  color: #87232D;
+}
+
+
+//services wrapper
+
+.landing_services {
+    padding: 5%;
+    padding-bottom: 8%;
+    width: 103%;
+    background: #990000;
+}
+
+.glyphicon {
+  font-size: 2.5em;
+  text-align: center;
+  border-radius: 50%;
+  border: 3px solid;
+  padding: 10%;
+  margin-left: 32%;
+  border-color:#AEB2B8;
+  color: #AEB2B8;
+}
+
+.indiv_serv h2 {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  color: #AEB2B8;
+}
+
+.indiv_serv p {
+  font-size: 1.2em;
+  line-height: 20px;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  position: absolute;
+}
+
+#design-description, #develop-description, #deploy-description {
+    color: #AEB2B8;
+}
+
+//who is bikes chicago div
+
+.glyphicon-globe {
+  font-size: 5em;
+  color: #990000;
+  padding:10%;
+  margin: 0%;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #990000;
+  margin-top: 25%;
+  margin-left: 25%;
+}
+
+.whois {
+  font-family: 'Indie Flower', cursive;
+
+}
+#whoistext {
+  text-align: left;
+  font-family: 'Indie Flower', cursive;
+  font-size: 4em;
+  margin-left: 1%;
+}
+
+#whoispara {
+  margin-left: 1%;
+  font-size: 1.5em;
+  padding-bottom: 2%;
 }
 
 .transparent {
@@ -51,7 +152,7 @@ p {
   list-style-type: none;
 }
 
-.col-md-4, .contact-btn {
+.contact-btn {
   margin-left: 30%;
 }
 
@@ -64,7 +165,7 @@ p {
   width:100%;
 }
 
-.row {
+.contact_us_please {
   margin-top: 2%;
   margin-left: 5%;
   margin-bottom:20%;
