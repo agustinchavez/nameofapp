@@ -1,0 +1,680 @@
+* {
+  z-index: 3;
+}
+
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/raty.eot");
+  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/raty.svg#raty") format("svg");
+  src: url("fonts/raty.ttf") format("truetype");
+  src: url("fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+/* line 5, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.field {
+  text-align: center;
+  color: #CC3300;
+}
+
+/* line 10, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.actions {
+  text-align: center;
+}
+
+/* line 14, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.col-md-4 p {
+  text-align: center;
+  color: black;
+}
+
+/* line 19, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.thumbnail {
+  width: 100%;
+}
+
+/* line 23, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.image {
+  border-style: inset;
+  border-width: 5px;
+  border-color: #990000;
+}
+
+/* line 29, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-list {
+  list-style-type: none;
+  display: inline;
+}
+
+/* line 34, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.row-bootsrap {
+  padding-left: 3%;
+  width: 45%;
+}
+
+/* line 39, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-description p {
+  text-align: left;
+}
+
+/* line 43, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-description {
+  list-style-type: none;
+  margin-top: 10%;
+}
+
+/* line 48, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-background {
+  margin-top: 0%;
+  background-color: #bdbdbd;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 55, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-page-side-picture {
+  position: absolute;
+  margin-top: 20%;
+  width: 40%;
+  margin-left: -40%;
+}
+
+/* line 62, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.picture-products {
+  border-radius: 25px;
+  border: 3px solid #990000;
+  margin-top: 10%;
+}
+
+/* line 68, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-display p {
+  font-family: 'Josefin Slab', serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 10%;
+}
+
+/* line 75, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-description p {
+  font-family: 'Patua One', cursive;
+}
+
+/* line 79, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-labels {
+  font-family: "Verdana";
+  font-size: 1.2em;
+}
+
+/* line 84, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.new-product-btn {
+  margin-bottom: 10%;
+  margin-left: 50%;
+}
+
+/* line 91, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-show-page {
+  background: url(bike-on-a-wall.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+/* line 98, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.row-products-show {
+  display: inline-block;
+  margin-top: 15%;
+  margin-left: 10%;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 107, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-image {
+  margin-top: 2%;
+  padding-left: 5%;
+}
+
+/* line 112, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.thumbnail {
+  width: 65%;
+  height: 50%;
+  margin-left: 0%;
+}
+
+/* line 118, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-information {
+  margin-top: 2%;
+  margin-left: -10%;
+}
+
+/* line 124, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-item-information {
+  margin-left: 4%;
+  padding: 3%;
+}
+
+/* line 129, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-item-information p {
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* line 135, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-comments {
+  margin-left: 5%;
+  margin-top: 4%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 141, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.rating, .rated {
+  text-align: center;
+}
+
+/* line 145, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-comments h4 {
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-bottom: 2%;
+  font-family: 'Josefin Slab', serif;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* line 154, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#individual-comments {
+  margin: 0%;
+}
+
+/* line 158, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-background-new-edit {
+  margin-top: 0%;
+  background-color: #bdbdbd;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 166, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-background-new-edit h1 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  margin: 3%;
+}
+
+/* line 174, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+html, body {
+  margin: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 181, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.wrapper-footer {
+  height: auto;
+  background-color: #660000;
+  margin-bottom: 0%;
+  z-index: 8;
+  color: white;
+}
+
+/* line 189, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.footer {
+  background-color: slategrey;
+  display: table-row;
+  height: 1px;
+  padding-bottom: -1%;
+}
+/* line 1, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* line 5, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 10, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.video-banner {
+  height: 40em;
+}
+
+/* line 14, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+video {
+  object-fit: fill;
+  margin-top: 0%;
+  margin-left: -2%;
+  width: 103%    !important;
+  height: inherit   !important;
+}
+
+/* line 22, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#logo-text {
+  position: absolute;
+  margin-top: -30%;
+  margin-left: 24%;
+  z-index: 4;
+}
+
+/* line 29, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#logo-title {
+  font-size: 4em;
+  font-weight: bolder;
+  color: #87232D;
+}
+
+/* line 35, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#logo-subtitle {
+  font-size: 2em;
+  font-weight: bolder;
+  color: #87232D;
+}
+
+/* line 44, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.landing_services {
+  padding: 5%;
+  padding-bottom: 8%;
+  width: 103%;
+  background: #990000;
+}
+
+/* line 51, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.glyphicon {
+  font-size: 2.5em;
+  text-align: center;
+  border-radius: 50%;
+  border: 3px solid;
+  padding: 10%;
+  margin-left: 32%;
+  border-color: #AEB2B8;
+  color: #AEB2B8;
+}
+
+/* line 62, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.indiv_serv h2 {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  color: #AEB2B8;
+}
+
+/* line 71, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.indiv_serv p {
+  font-size: 1.2em;
+  line-height: 20px;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  position: absolute;
+}
+
+/* line 79, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#design-description, #develop-description, #deploy-description {
+  color: #AEB2B8;
+}
+
+/* line 85, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.glyphicon-globe {
+  font-size: 5em;
+  color: #990000;
+  padding: 10%;
+  margin: 0%;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #990000;
+  margin-top: 25%;
+  margin-left: 25%;
+}
+
+/* line 97, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.whois {
+  font-family: 'Indie Flower', cursive;
+}
+
+/* line 101, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#whoistext {
+  text-align: left;
+  font-family: 'Indie Flower', cursive;
+  font-size: 4em;
+  margin-left: 1%;
+}
+
+/* line 108, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#whoispara {
+  margin-left: 1%;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+
+/* line 114, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.transparent {
+  margin-left: 25%;
+  margin-right: 25%;
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+  text-align: center;
+  width: 45%;
+  margin-top: 10%;
+  margin-bottom: 50%;
+}
+
+/* line 125, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.transparent h1 {
+  color: #CC3300;
+  font-size: 4em;
+}
+
+/* line 130, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.transparent h2 {
+  color: #E65C00;
+  font-size: 2em;
+  padding-bottom: 3%;
+}
+
+/* line 136, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+p {
+  text-align: center;
+}
+
+/* line 140, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.navbar-default {
+  background-color: #660000;
+  margin-bottom: 0%;
+  z-index: 8;
+}
+
+/* line 146, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.navbar-form, .navbar-left {
+  margin-top: 1%;
+  color: #990000;
+}
+
+/* line 151, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.navbar-brand {
+  list-style-type: none;
+}
+
+/* line 155, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.contact-btn {
+  margin-left: 30%;
+}
+
+/* line 159, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.contact-background {
+  margin-top: 0%;
+  height: 100%;
+  background: url(road-bike.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+/* line 168, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.contact_us_please {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 20%;
+  color: red;
+  padding: 0%;
+  text-align: left;
+  width: 45%;
+  z-index: 1;
+}
+
+/* line 179, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.headline {
+  margin-left: 6%;
+  padding-top: 8%;
+  margin-top: 0%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 5em;
+  color: #990000;
+}
+
+/* line 188, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.about-background {
+  margin-top: 0%;
+  height: 100%;
+  background: url(tour-de-france.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+/* line 197, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.about {
+  margin-top: -3%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15%;
+  padding-top: 15%;
+  text-align: center;
+  width: 45%;
+  z-index: 1;
+}
+
+/* line 209, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.about h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 5em;
+  color: #990000;
+  background: #7f7f7f;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 218, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.about p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.10em;
+  color: #cc0000;
+  font-weight: bold;
+  background: #7f7f7f;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 227, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.footer {
+  background-color: slategrey;
+  display: table-row;
+  height: 1px;
+}
+
+/* line 233, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+html, body {
+  margin: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 240, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.wrapper-footer {
+  height: auto;
+  background-color: #660000;
+  margin-bottom: 0%;
+  z-index: 8;
+  color: white;
+}
+/* line 5, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+body, .wrapper {
+  margin-top: 0%;
+  background-color: #bdbdbd;
+  position: absolute;
+  width: 100%;
+  background-size: cover;
+}
+
+/* line 13, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+h1 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  margin: 3%;
+}
+
+/* line 21, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 26, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+.btn-new-user {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 32, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+.users-background-new-edit {
+  margin-top: 0%;
+  background-color: #bdbdbd;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 40, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+.users-background-new-edit h2 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  margin: 3%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
