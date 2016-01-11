@@ -3,13 +3,17 @@
     <p><%= product.name %></p>
     <li class="Responsive image"><%= image_tag(product.image_url, :style => 'height: 100%; width: 100%;') %></li>
     <ul class="products-description">
-      <li><p><strong class="products-labels">Description: </strong><br> <%= product.description %></p></li>
+      <li><p><strong class="products-labels">Description: </strong><br><%= truncate(product.description, length: 70) %></p></li>
       <li><p><strong class="products-labels">Color: </strong><%= product.colour %></p></li>
       <li><p><strong class="products-labels">Price: </strong>$<%= product.price %></p></li>
       <li>
-        <%= link_to 'Show', product %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% if current_user.admin? %>
+          <%= link_to 'Show', product %>
+          <%= link_to 'Edit', edit_product_path(product) %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% else %>
+          <%= link_to 'Show', product %>
+        <% end %>
       </li>
     </li>
   </ul>

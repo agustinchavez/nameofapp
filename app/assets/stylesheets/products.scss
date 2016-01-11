@@ -72,6 +72,10 @@
   margin-top: 10%;
 }
 
+.products-display {
+  display: inline-block;
+}
+
 .products-description p {
   font-family: 'Patua One', cursive;
 }
@@ -89,7 +93,7 @@
 //Products Show Page
 
 .products-show-page {
-  background: url(bike-on-a-wall.jpg) ;
+  //background: url(bike-on-a-wall.jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;

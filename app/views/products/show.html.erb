@@ -55,14 +55,19 @@
     </div>
 
 
-    <div class="col-md-4">
-      <button type="submit" class="btn btn-default">
-        <%= link_to 'Edit', edit_product_path(@product) %>
-      </button>|
-      <button type="submit" class="btn btn-default">
-        <%= link_to 'Back', products_path %>
-      </button>
-    </div>
 
+
+    <% if user_signed_in? && current_user.admin? %>
+        <button type="submit" class="btn btn-default col-md-4">
+          <%= link_to 'Edit', edit_product_path(@product) %>
+        </button>|
+        <button type="submit" class="btn btn-default">
+          <%= link_to 'Back', products_path %>
+        </button>
+    <% else %>
+      <button type="submit" class="btn btn-default col-md-4">
+          <%= link_to 'Back', products_path %>
+        </button>
+    <% end %>
 
   </div>

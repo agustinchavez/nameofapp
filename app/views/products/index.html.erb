@@ -9,11 +9,10 @@
     </div>
 
   </div>
-  <button type="submit" class="btn btn-default new-product-btn"><%= link_to 'New Product', new_product_path %></button>
+    <% if current_user.admin? %>
+      <button type="submit" class="btn btn-default new-product-btn"><%= link_to 'New Product', new_product_path %></button>
+    <% end %>
 
-  <dic class="products-page-side-picture">
-    <img class="picture-products" src="https://s3.amazonaws.com/agustinchavez.ninja/lighthouse-905674.jpg" style="width:100%;height:100%;">
-  </div>
 
   <br>
 
