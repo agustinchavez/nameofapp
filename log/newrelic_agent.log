@@ -592,3 +592,8 @@
 [2016-01-18 18:08:49 -0600 Agustins-MacBook-Pro.local (63502)] INFO : Doing deferred dependency-detection before Rack startup
 [2016-01-18 18:08:50 -0600 Agustins-MacBook-Pro.local (63502)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1151602/applications/12519573
 [2016-01-18 18:10:39 -0600 Agustins-MacBook-Pro.local (63502)] INFO : Starting Agent shutdown
+[2016-01-19 09:35:44 -0600 Agustins-MacBook-Pro.local (63464)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2016-01-19 09:35:44 -0600 Agustins-MacBook-Pro.local (63464)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-123.newrelic.com:443 after 0.001134 seconds: getaddrinfo: nodename nor servname provided, or not known
+[2016-01-19 10:02:06 -0600 Agustins-MacBook-Pro.local (63464)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2016-01-19 10:02:06 -0600 Agustins-MacBook-Pro.local (63464)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-123.newrelic.com:443 after 0.001612 seconds: getaddrinfo: nodename nor servname provided, or not known
+[2016-01-19 10:04:11 -0600 Agustins-MacBook-Pro.local (63464)] INFO : Starting Agent shutdown

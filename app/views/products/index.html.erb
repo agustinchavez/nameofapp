@@ -1,21 +1,16 @@
 <div class="products-background">
   <p id="notice"><%= notice %></p>
-
   <div class="row-bootsrap">
     <div class="col-md-8">
       <% cache(@products) do %>
-      <%= render partial: "shared/product", collection: @products %>
+        <%= render partial: "shared/product", collection: @products %>
       <% end %>
     </div>
-
   </div>
-    <% if user_signed_in? && current_user.admin? %>
-      <button type="submit" class="btn btn-default new-product-btn"><%= link_to 'New Product', new_product_path %></button>
-    <% end %>
-
-
+  <% if user_signed_in? && current_user.admin? %>
+    <button type="submit" class="btn btn-default new-product-btn"><%= link_to 'New Product', new_product_path %></button>
+  <% end %>
   <br>
-
 </div>
 
 
