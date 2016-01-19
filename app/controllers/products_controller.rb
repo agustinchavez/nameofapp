@@ -2,20 +2,20 @@ class ProductsController < ApplicationController
   respond_to :json, :html
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, :except => [:index]
-  before_filter :verify_is_admin!, :except => [:show, :index]
+  before_filter :verify_is_admin, :except => [:show, :index]
 
 
   # GET /products
   # GET /products.json
   def index
-  if params[:q]
-    search_term = params[:q]
-    @products = Product.where("LOWER(name) LIKE ? OR LOWER(description) LIKE ?", "%#{search_term.downcase}%", "%#{search_term.downcase}%")
-  else
-    @products = Product.all
-  end
-  respond_with @products
-end
+      if params[:q]
+        search_term = params[:q]
+        @products = Product.where("LOWER(name) LIKE ? OR LOWER(description) LIKE ?", "%#{search_term.downcase}%", "%#{search_term.downcase}%")
+      else
+        @products = Product.all
+      end
+      respond_with @products
+    end
 
   # GET /products/1
   # GET /products/1.json
@@ -74,17 +74,17 @@ end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
+  def set_product
+    @product = Product.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:product).permit(:name, :description, :image_url, :colour, :price)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def product_params
+    params.require(:product).permit(:name, :description, :image_url, :colour, :price)
+  end
 
-    def verify_is_admin
-      (current_user.nil?) ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
-    end
+  def verify_is_admin
+    (current_user.nil?) ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
+  end
 
 end
