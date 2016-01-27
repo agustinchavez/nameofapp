@@ -597,3 +597,25 @@
 [2016-01-19 10:02:06 -0600 Agustins-MacBook-Pro.local (63464)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
 [2016-01-19 10:02:06 -0600 Agustins-MacBook-Pro.local (63464)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-123.newrelic.com:443 after 0.001612 seconds: getaddrinfo: nodename nor servname provided, or not known
 [2016-01-19 10:04:11 -0600 Agustins-MacBook-Pro.local (63464)] INFO : Starting Agent shutdown
+[2016-01-27 14:04:30 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Starting the New Relic agent in "development" environment.
+[2016-01-27 14:04:30 -0600 Agustins-MacBook-Pro.local (1673)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-01-27 14:04:30 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Reading configuration from config/newrelic.yml (/Users/agustinchavez/Desktop/nameofapp)
+[2016-01-27 14:04:30 -0600 Agustins-MacBook-Pro.local (1673)] INFO : New Relic Agent Developer Mode enabled.
+[2016-01-27 14:04:30 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Environment: development
+[2016-01-27 14:04:30 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Dispatcher: webrick
+[2016-01-27 14:04:30 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Application: My Application (Development)
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Installing ActiveJob instrumentation
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Installing ActiveRecord 4 instrumentation
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Installing Net instrumentation
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Installing deferred Rack instrumentation
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Installing Redis Instrumentation
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Installing Rails 4 Controller instrumentation
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Installing Rails 4 view instrumentation
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Installing Rails 4 Error instrumentation
+[2016-01-27 14:04:31 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Finished instrumentation
+[2016-01-27 14:04:32 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1151602/applications/12519573
+[2016-01-27 14:04:33 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-01-27 14:32:51 -0600 Agustins-MacBook-Pro.local (1673)] INFO : Starting Agent shutdown

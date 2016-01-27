@@ -13,29 +13,38 @@
 
 video {
   object-fit: fill;
-  margin-top: 0%;
+  margin-top: -2%;
   margin-left: -2%;
   width: 103%    !important;
   height: inherit   !important;
 }
 
 #logo-text {
-  position: absolute;
-  margin-top: -30%;
-  margin-left: 24%;
-  z-index: 4;
-}
+  position: relative;
+  top: 25%;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
 
-#logo-title {
-  font-size: 4em;
-  font-weight: bolder;
-  color: #87232D;
-}
+  p {
+    display: block;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 6px #3D1F00;
+  }
 
-#logo-subtitle {
-  font-size: 2em;
-  font-weight: bolder;
-  color: #87232D;
+  #logo-subtitle {
+    font-family: 'Josefin Slab', serif;
+    font-size: 2em;
+    padding: 0;
+    margin-top: -8%;
+    font-weight: 700;
+  }
+
+  #logo-title {
+    font-family: 'Josefin Slab', serif;
+    font-size: 8em;
+  }
 }
 
 
@@ -63,7 +72,7 @@ video {
   font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Josefin Slab', serif;
   text-align: center;
   color: #AEB2B8;
 }
@@ -100,7 +109,7 @@ video {
 
 #whoistext {
   text-align: left;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Josefin Slab', serif;
   font-size: 4em;
   margin-left: 1%;
 }
