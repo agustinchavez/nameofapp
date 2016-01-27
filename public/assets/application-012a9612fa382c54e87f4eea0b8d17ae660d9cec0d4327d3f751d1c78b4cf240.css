@@ -1,0 +1,1564 @@
+* {
+  z-index: 3;
+}
+
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/raty.eot");
+  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/raty.svg#raty") format("svg");
+  src: url("fonts/raty.ttf") format("truetype");
+  src: url("fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 10, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 20, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 34, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 55, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 68, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 78, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 90, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 98, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 110, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 118, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 127, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 136, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 145, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 154, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 162, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 170, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 174, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 185, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 193, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 204, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 212, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 222, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 230, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 253, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 267, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 278, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 291, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 303, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 312, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 323, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 335, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 347, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 358, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 371, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 380, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 391, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 400, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 409, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 420, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 425, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+td,
+th {
+  padding: 0;
+}
+/* line 5, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.field {
+  text-align: center;
+  color: #CC3300;
+}
+
+/* line 10, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.actions {
+  text-align: center;
+}
+
+/* line 14, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.col-md-4 p {
+  text-align: center;
+  color: black;
+}
+
+/* line 19, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.thumbnail {
+  width: 100%;
+}
+
+/* line 23, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.image {
+  border-style: inset;
+  border-width: 5px;
+  border-color: #990000;
+}
+
+/* line 29, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-list {
+  list-style-type: none;
+  display: inline;
+}
+
+/* line 34, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.row-bootsrap {
+  padding-left: 3%;
+  width: 45%;
+}
+
+/* line 39, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-description p {
+  text-align: left;
+}
+
+/* line 43, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-description {
+  list-style-type: none;
+  margin-top: 10%;
+}
+
+/* line 48, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-background {
+  margin-top: 0%;
+  background-color: #bdbdbd;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 55, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-page-side-picture {
+  position: absolute;
+  margin-top: 20%;
+  width: 40%;
+  margin-left: -40%;
+}
+
+/* line 62, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.picture-products {
+  border-radius: 25px;
+  border: 3px solid #990000;
+  margin-top: 10%;
+}
+
+/* line 68, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-display p {
+  font-family: 'Josefin Slab', serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 10%;
+}
+
+/* line 75, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-display {
+  display: inline-block;
+}
+
+/* line 79, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-description p {
+  font-family: 'Patua One', cursive;
+}
+
+/* line 83, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-labels {
+  font-family: "Verdana";
+  font-size: 1.2em;
+}
+
+/* line 88, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.new-product-btn {
+  margin-bottom: 10%;
+  margin-left: 50%;
+}
+
+/* line 95, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-show-page {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+/* line 101, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.row-products-show {
+  display: inline-block;
+  margin-top: 15%;
+  margin-left: 10%;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 109, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-image {
+  margin-top: 2%;
+  padding-left: 5%;
+}
+
+/* line 114, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.thumbnail {
+  width: 65%;
+  height: 50%;
+  margin-left: 0%;
+}
+
+/* line 120, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-information {
+  margin-top: 2%;
+  margin-left: -10%;
+}
+
+/* line 125, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-item-information {
+  margin-left: 4%;
+  padding: 3%;
+}
+
+/* line 130, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-item-information p {
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* line 136, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-comments {
+  margin-left: 5%;
+  margin-top: 4%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 142, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.rating, .rated {
+  text-align: center;
+}
+
+/* line 146, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#products-show-comments h4 {
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-bottom: 2%;
+  font-family: 'Josefin Slab', serif;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* line 155, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+#individual-comments {
+  margin: 0%;
+}
+
+/* line 159, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-background-new-edit {
+  margin-top: 0%;
+  background-color: #bdbdbd;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 167, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.products-background-new-edit h1 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  margin: 3%;
+}
+
+/* line 175, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+html, body {
+  margin: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 182, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.wrapper-footer {
+  height: auto;
+  background-color: #660000;
+  margin-bottom: 0%;
+  z-index: 8;
+  color: white;
+}
+
+/* line 190, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/products.scss */
+.footer {
+  background-color: slategrey;
+  display: table-row;
+  height: 1px;
+  padding-bottom: -1%;
+}
+/* line 1, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* line 5, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 10, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.video-banner {
+  height: 40em;
+}
+
+/* line 14, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+video {
+  object-fit: fill;
+  margin-top: -2%;
+  margin-left: -2%;
+  width: 103%    !important;
+  height: inherit   !important;
+}
+
+/* line 22, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#logo-text {
+  position: relative;
+  top: 25%;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+/* line 29, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#logo-text p {
+  display: block;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 6px #3D1F00;
+}
+/* line 36, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#logo-text #logo-subtitle {
+  font-family: 'Josefin Slab', serif;
+  font-size: 2em;
+  padding: 0;
+  margin-top: -8%;
+  font-weight: 700;
+}
+/* line 44, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#logo-text #logo-title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 8em;
+}
+
+/* line 53, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.landing_services {
+  padding: 5%;
+  padding-bottom: 8%;
+  width: 103%;
+  background: #990000;
+}
+
+/* line 60, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.glyphicon {
+  font-size: 2.5em;
+  text-align: center;
+  border-radius: 50%;
+  border: 3px solid;
+  padding: 10%;
+  margin-left: 32%;
+  border-color: #AEB2B8;
+  color: #AEB2B8;
+}
+
+/* line 71, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.indiv_serv h2 {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Josefin Slab', serif;
+  text-align: center;
+  color: #AEB2B8;
+}
+
+/* line 80, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.indiv_serv p {
+  font-size: 1.2em;
+  line-height: 20px;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  position: absolute;
+}
+
+/* line 88, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#design-description, #develop-description, #deploy-description {
+  color: #AEB2B8;
+}
+
+/* line 94, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.glyphicon-globe {
+  font-size: 5em;
+  color: #990000;
+  padding: 10%;
+  margin: 0%;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #990000;
+  margin-top: 25%;
+  margin-left: 25%;
+}
+
+/* line 106, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.whois {
+  font-family: 'Indie Flower', cursive;
+}
+
+/* line 110, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#whoistext {
+  text-align: left;
+  font-family: 'Josefin Slab', serif;
+  font-size: 4em;
+  margin-left: 1%;
+}
+
+/* line 117, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+#whoispara {
+  margin-left: 1%;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+
+/* line 123, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.transparent {
+  margin-left: 25%;
+  margin-right: 25%;
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+  text-align: center;
+  width: 45%;
+  margin-top: 10%;
+  margin-bottom: 50%;
+}
+
+/* line 134, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.transparent h1 {
+  color: #CC3300;
+  font-size: 4em;
+}
+
+/* line 139, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.transparent h2 {
+  color: #E65C00;
+  font-size: 2em;
+  padding-bottom: 3%;
+}
+
+/* line 145, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+p {
+  text-align: center;
+}
+
+/* line 149, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.navbar-default {
+  background-color: #660000;
+  margin-bottom: 0%;
+  z-index: 8;
+}
+
+/* line 155, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.navbar-form, .navbar-left {
+  margin-top: 1%;
+  color: #990000;
+}
+
+/* line 160, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.navbar-brand {
+  list-style-type: none;
+}
+
+/* line 164, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.contact-btn {
+  margin-left: 30%;
+}
+
+/* line 168, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.contact-background {
+  margin-top: 0%;
+  height: 100%;
+  background: url(road-bike.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+/* line 177, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.contact_us_please {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 20%;
+  color: red;
+  padding: 0%;
+  text-align: left;
+  width: 45%;
+  z-index: 1;
+}
+
+/* line 188, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.headline {
+  margin-left: 6%;
+  padding-top: 8%;
+  margin-top: 0%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 5em;
+  color: #990000;
+}
+
+/* line 197, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.about-background {
+  margin-top: 0%;
+  height: 100%;
+  background: url(tour-de-france.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+/* line 206, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.about {
+  margin-top: -3%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15%;
+  padding-top: 15%;
+  text-align: center;
+  width: 45%;
+  z-index: 1;
+}
+
+/* line 217, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.about h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 5em;
+  color: #990000;
+  background: #7f7f7f;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 226, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.about p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.10em;
+  color: #cc0000;
+  font-weight: bold;
+  background: #7f7f7f;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 235, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.footer {
+  background-color: slategrey;
+  display: table-row;
+  height: 1px;
+}
+
+/* line 241, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+html, body {
+  margin: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 248, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/static_pages.scss */
+.wrapper-footer {
+  height: auto;
+  background-color: #660000;
+  margin-bottom: 0%;
+  z-index: 8;
+  color: white;
+}
+/* line 5, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+body, .wrapper {
+  margin-top: 0%;
+  background-color: #bdbdbd;
+  position: absolute;
+  width: 100%;
+  background-size: cover;
+}
+
+/* line 13, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+h1 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  margin: 3%;
+}
+
+/* line 21, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 26, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+.btn-new-user {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 32, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+.users-background-new-edit {
+  margin-top: 0%;
+  background-color: #bdbdbd;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 40, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/users.scss */
+.users-background-new-edit h2 {
+  font-family: 'Josefin Slab', serif;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  margin: 3%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 33, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 54, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 67, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 77, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 97, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 109, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 117, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 126, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 135, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 144, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 153, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 161, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 169, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 173, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 184, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 192, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 203, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 211, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 221, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 229, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 252, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 266, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 277, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 290, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 302, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 311, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 322, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 334, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 346, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 357, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 370, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 379, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 390, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 399, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 408, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 419, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 424, /Users/agustinchavez/Desktop/nameofapp/app/assets/stylesheets/normalize.css.scss */
+td,
+th {
+  padding: 0;
+}
